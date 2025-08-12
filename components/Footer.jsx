@@ -67,7 +67,7 @@ export default function Footer() {
             variants={fadeInUp}
           >
             <p className="text-xs md:text-sm italic text-gray-800/80 bg-blue-800/5 p-1 px-2 border-r-[#6840ff] border-r-2 dark:bg-white/5 dark:border-r-white dark:text-white">
-              Built with 😜 by Proppo
+              Built with ❤️ by Proppo
             </p>
           </motion.div>
         </div>
