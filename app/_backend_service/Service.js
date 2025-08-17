@@ -14,6 +14,7 @@ api.interceptors.response.use(
 export class DataService{
     constructor(){
         this.webhook_key = 'CHANGE_THIS_TO_SECURE_KEY'
+        this.is_submitted = false
     }
     
     async send_mail(obj){
@@ -29,6 +30,10 @@ export class DataService{
             res.message = error.response.data.message
         }
         return res
+    }
+
+    setUser({is_submitted}){
+        if(is_submitted) this.is_submitted = is_submitted
     }
 }
 

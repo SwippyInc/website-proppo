@@ -7,6 +7,7 @@ import Button, { PopInput, PopNumberInput, NextButton, RoundButton, RoundButton1
 import Input from "./Input"
 import Data from "@/app/_backend_service/Service"
 import moment from "moment"
+import { useRouter } from "next/navigation"
 
 // Fade-in animation for ResponsiveDialog
 const fadeInUp = {
@@ -55,6 +56,7 @@ export function GetStartedForm({ hideFun }) {
   const [message,setMessage] = useState('Fill your details to get started 🎉')
   const [isError,setIsError] = useState(false)
   const [success,setSuccess] = useState(false)
+  const router = useRouter()
   const [state, setState] = useState({
     name: '',
     email: '',
@@ -103,8 +105,8 @@ export function GetStartedForm({ hideFun }) {
       if(status == 'success'){
         setState(s=>({...s,name:'',phone:'',email:'',anything_else:''}))
         setIsError(false)
-        setSuccess(true)
-        setMessage("Signup request submitted successfully. We'll contact you ASAP! 🎉")
+        Data.setUser({is_submitted:true})
+        router.push(`/thanks?t=SIGNUP`)
       }else{
         setIsError(true)
         setSuccess(false)
@@ -122,7 +124,7 @@ export function GetStartedForm({ hideFun }) {
       <h2 className="text-xl md:text-3xl font-semibold text-gray-800 ">Get started with <span className="bl_un">Proppo</span>! </h2>
       <p className={`text-xs md:text-sm italic mt-2 p-1 px-2  border-r-2 max-w-[80vw] dark:bg-white/5 dark:border-r-white dark:text-white w-fit mx-auto ${isError ? 'border-r-red-500 text-red-500 bg-red-500/5' : success ? 'border-r-green-500 text-green-500 bg-green-500/5' : 'border-r-[#6840ff] text-gray-800/80 bg-blue-800/5'}`}>{message}</p>
       <form onSubmit={handleSubmit} className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 my-8 text-left mx-auto w-[95%]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 text-left mx-auto w-[95%]">
           <Input label="Name" value={state.name} onChange={e=>setState(s=>({...s,name:e.target.value}))} placeholder="Rakesh Kumar" required/>
           <Input type="email" label="Email" value={state.email} onChange={e=>setState(s=>({...s,email:e.target.value}))} placeholder="mail@example.com" required/>
           <Input type="phone" label="Mobile" value={state.phone} onChange={e=>{
@@ -132,7 +134,7 @@ export function GetStartedForm({ hideFun }) {
           <Input label="Remarks" value={state.anything_else} onChange={e=>setState(s=>({...s,anything_else:e.target.value}))} placeholder="Special requirements..."/>
         </div>
         <div className="flex items-center justify-center gap-2">
-          <Button type="submit" disabled={disabled} styles="btn_pri md:text-lg px-5 disabled:pointer-events-none disabled:opacity-50">📩 Submit</Button>
+          <Button type="submit" disabled={disabled || submitting} styles="btn_pri md:text-lg px-5 disabled:pointer-events-none disabled:opacity-50">📩 Submit</Button>
         </div>
       </form>
     </div>
@@ -146,7 +148,7 @@ export function GetDemoForm({ hideFun }) {
   const [isError, setIsError] = useState(false)
   const [success,setSuccess] = useState(false)
   const [message,setMessage] = useState('Fill your details to book a call 🎉')
-
+  const router = useRouter()
   const [state, setState] = useState({
     name: '',phone: '',
     anything_else: '',time:null
@@ -179,8 +181,8 @@ export function GetDemoForm({ hideFun }) {
       if(status == 'success'){
         setState(s=>({...s,name:'',phone:'',anything_else:'',time:null}))
         setIsError(false)
-        setSuccess(true)
-        setMessage("Callback request submitted successfully. We'll contact you ASAP! 🎉")
+        Data.setUser({is_submitted:true})
+        router.push(`/thanks?t=DEMO_REQUEST`)
       }else{
         setIsError(true)
         setSuccess(false)
@@ -206,7 +208,7 @@ export function GetDemoForm({ hideFun }) {
       <h2 className="text-xl md:text-3xl font-semibold text-gray-800 ">Book a <span className="bl_un">Call</span>! </h2>
       <p className={`text-xs md:text-sm italic mt-2 p-1 px-2  border-r-2 max-w-[80vw] dark:bg-white/5 dark:border-r-white dark:text-white w-fit mx-auto ${isError ? 'border-r-red-500 text-red-500 bg-red-500/5' : success ? 'border-r-green-500 text-green-500 bg-green-500/5' : 'border-r-[#6840ff] text-gray-800/80 bg-blue-800/5'}`}>{message}</p>
       <form onSubmit={handleSubmit} className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 my-8 text-left mx-auto w-[95%]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 text-left mx-auto w-[95%]">
           <Input label="Name" value={state.name} onChange={e=>setState(s=>({...s,name:e.target.value}))} placeholder="Rakesh Kumar"/>
           <Input type="phone" label="Mobile" value={state.phone} onChange={e=>setState(s=>({...s,phone:e.target.value}))} placeholder="9876543210"/>
           <Input type="datetime-local" label="Time" value={state.time} onChange={e=>setState(s=>({...s,time:e.target.value}))} placeholder=""/>
