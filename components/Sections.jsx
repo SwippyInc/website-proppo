@@ -29,6 +29,7 @@ import wdpd from '../public/images/wdpd.png'
 import { useRouter } from "next/navigation"
 import Button from "./Button"
 import { useBookCallForm, useSignUpForm } from "@/hooks/useForm"
+import member_image from '../public/images/member.png'
 
 // Animation variants for reusability
 const fadeInUp = {
@@ -517,6 +518,83 @@ export function Testimonials() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </motion.div>
+    </section>
+  )
+}
+
+export function TeamSection() {
+  const team_data = [
+    {
+      name: 'Aniket Chauhan',
+      role: 'Co-Founder',
+      description: 'Aniket is a dynamic entrepreneur with expertise spanning music distribution and hospitality. As the founder of Tunest, he pioneered the distribution of Himachali regional music on digital streaming platforms, managing a catalog of 10,000+ tracks and creating new income streams for local artists. With proven skills in business strategy, growth, and marketing, Aniket has also worked closely with hotels and travel agencies, giving him a deep, practical understanding of the hospitality industry and its operational challenges.',
+      // image: team_member1
+    },
+    {
+      name: 'Saurabh Chauhan',
+      role: 'Co-Founder',
+      description: 'Saurabh is a full-stack developer with strong technical foundations in web development. At Tunest, he engineered the platform that enabled large-scale content distribution. He brings a product-first mindset, ensuring that every digital solution is scalable, reliable, and user-friendly, bridging technology with real-world business needs.',
+      // image: team_member2
+    },
+    {
+      name: 'Ojas Nirala',
+      role: 'UI/UX Designer',
+      description: 'Ojas is a creative problem-solver who specializes in crafting intuitive and impactful user experiences. His design philosophy focuses on blending functionality with aesthetics, ensuring that every product interaction feels seamless and engaging. With an eye for detail and passion for user-centric design, Ojas elevates our products to global standards of usability and appeal.',
+      // image: team_member3
+    },
+    {
+      name: 'Sharan Chauhan',
+      role: 'Hospitality Specialist',
+      description: 'Sharan brings invaluable hospitality domain expertise, having worked extensively with multiple hotels. His hands-on industry experience allows him to identify the pain points of hoteliers and guests alike, ensuring our solutions are built with real-world challenges in mind. Sharan’s perspective anchors the team in practicality, helping us design technology that truly serves the hospitality sector.',
+      // image: team_member4
+    }
+  ]
+
+  return (
+    <section className="min-h-screen py-16 flex justify-center bg-[#6840ff]/5" id="team">
+      <motion.div
+        className="relative w-[90%] md:w-[80%] mx-auto"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
+      >
+        <motion.div
+          className="flex items-center flex-col text-center gap-2 mb-8 md:mb-12"
+          variants={fadeInUp}
+        >
+          <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl">
+            Meet the <span className="bl_un">Team</span>
+          </h1>
+          <p className="text-xs md:text-xl text-gray-800/80 italic mt-2 bg-blue-800/5 p-1 px-2 border-r-[#6840ff] border-r-2 max-w-[90vw] dark:bg-white/5 dark:border-r-white dark:text-white">
+            ⚡ Combining entrepreneurial vision, technical innovation, design excellence, and hospitality expertise.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          {team_data.map((member, index) => (
+            <motion.div
+              key={index}
+              className="p-6 rounded-3xl bg-white/70 dark:bg-black/90 shadow-lg shadow-[#6840ff]/5 border border-gray-200/50 dark:border-gray-800/50 flex flex-col"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={scaleIn}
+            >
+              <Image
+                src={member_image}
+                alt={member.name}
+                height={200}
+                width={200}
+                className="h-24 w-24 rounded-full object-cover mb-4"
+              />
+              <h2 className="font-medium text-xl md:text-2xl">{member.name}</h2>
+              <p className="text-sm md:text-base text-[#6840ff] mb-2">{member.role}</p>
+              <p className="text-xs md:text-sm opacity-70">{member.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
     </section>
   )
