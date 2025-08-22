@@ -38,6 +38,7 @@ export default function NavBar() {
                 <li><p className="menu_lia spl" data="services">Services</p></li>
                 <li><p className="menu_lia spl" data="whyus">Why Us</p></li>
                 <li><p className="menu_lia spl" data="pricing">Pricing</p></li>
+                <li><p className="menu_lia spl" data="team">Team</p></li>
               </ul>
               <div className="flex flex-col md:flex-row items-center justify-start w-[90%] md:w-auto md:justify-center gap-2 mt-2 mb-8 md:mb-0">
                 <Button styles="btn_pri px-5 block w-full md:w-auto text-lg md:text-base" onClick={renderSUForm}>Sign Up</Button>
