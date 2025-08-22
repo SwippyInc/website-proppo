@@ -528,7 +528,9 @@ export function TeamSection() {
     {
       name: 'Aniket Chauhan',
       role: 'Co-Founder',
-      description: 'Aniket is a dynamic entrepreneur with expertise spanning music distribution and hospitality. As the founder of Tunest, he pioneered the distribution of Himachali regional music on digital streaming platforms, managing a catalog of 10,000+ tracks and creating new income streams for local artists. With proven skills in business strategy, growth, and marketing, Aniket has also worked closely with hotels and travel agencies, giving him a deep, practical understanding of the hospitality industry and its operational challenges.',
+      description: 'Aniket is a dynamic entrepreneur with expertise spanning music distribution and hospitality. As the founder of Tunest, he pioneered the distribution of Himachali regional music on digital streaming platforms, managing a catalog of over 10,000 tracks and opening up new income streams for local artists. His strengths lie in business strategy, growth, and marketing, with a proven ability to scale ventures from the ground up.',
+
+      d1: 'Alongside this, Aniket has deep roots in hospitality. Having worked closely with hotels and travel agencies, and as the owner of a boutique property himself, he knows the operational challenges hoteliers face on a day-to-day basis, from reservations and inventory to guest management. It was these firsthand experiences that led him to create Proppo, a next-generation PMS designed with the hotelier’s perspective at its core, solving the very problems he encountered while running his own property.',
       // image: team_member1
     },
     {
@@ -592,6 +594,7 @@ export function TeamSection() {
               <h2 className="font-medium text-xl md:text-2xl">{member.name}</h2>
               <p className="text-sm md:text-base text-[#6840ff] mb-2">{member.role}</p>
               <p className="text-xs md:text-sm opacity-70">{member.description}</p>
+              {member.d1 ? <p className="text-xs md:text-sm opacity-70 mt-3">{member.d1}</p> : null}
             </motion.div>
           ))}
         </div>
