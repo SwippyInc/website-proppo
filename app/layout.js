@@ -1,6 +1,8 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import dynamic from 'next/dynamic';
+const GoogleAnalytics = dynamic(() => import('@/components/GoogleAnalytics'), { ssr: false });
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -16,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className}`}>
+        <GoogleAnalytics GTM_ID="GTM-M2QT2W4N"/>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
