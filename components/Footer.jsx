@@ -55,8 +55,7 @@ export default function Footer() {
             <ul className="list-none flex flex-col gap-1 text-xs md:text-sm leading-5">
               <li>
                 Swippy Tect LLP<br />
-                Dhangvi Kalan, Kotkhai Local Bazaar,<br />
-                Kotkhai, Shimla (HP) - 171202
+                Kasumpti, Shimla (HP) - 171009
               </li>
               <li><Link href="mailto:aniket@swippy.in" title="Mail Us" className="hover:text-[#6840ff] transition-colors">aniket@swippy.in</Link></li>
               <li><Link href="tel:+917018803644" title="Call Us" className="hover:text-[#6840ff] transition-colors">+91 70188 03644</Link></li>
