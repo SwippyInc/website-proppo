@@ -57,8 +57,8 @@ export default function Footer() {
                 Swippy Tect LLP<br />
                 Kasumpti, Shimla (HP) - 171009
               </li>
-              <li><Link href="mailto:aniket@swippy.in" title="Mail Us" className="hover:text-[#6840ff] transition-colors">aniket@swippy.in</Link></li>
-              <li><Link href="tel:+917018803644" title="Call Us" className="hover:text-[#6840ff] transition-colors">+91 70188 03644</Link></li>
+              <li><Link href="mailto:mail@proppo.in" title="Mail Us" className="hover:text-[#6840ff] transition-colors">mail@proppo.in</Link></li>
+              <li><Link href="tel:+919418855294" title="Call Us" className="hover:text-[#6840ff] transition-colors">+91 94188 55294</Link></li>
             </ul>
           </motion.div>
           <motion.div
