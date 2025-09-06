@@ -33,9 +33,9 @@ export default function NavBar() {
             <Link href={"/"} className='flex items-center justify-start logo_a dark:bg-white p-2 rounded-xl'><Image src={proppo_logo} alt='Proppo' height={500} width={500} className="h-6 md:h-8 w-auto p-0 m-0"/></Link>
             
             <div className="menu">
-              <ul className="menu_ul">
+              <ul className="menu_ul whitespace-nowrap">
                 <li><p className="menu_lia spl" data="features">Features</p></li>
-                <li><p className="menu_lia spl" data="services">Services</p></li>
+                {/* <li><p className="menu_lia spl" data="services">Services</p></li> */}
                 <li><p className="menu_lia spl" data="whyus">Why Us</p></li>
                 <li><p className="menu_lia spl" data="pricing">Pricing</p></li>
                 <li><p className="menu_lia spl" data="team">Team</p></li>

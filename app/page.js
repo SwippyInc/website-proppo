@@ -2,7 +2,7 @@
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import NavBar from '@/components/NavBar'
-import WhoIsProppoFor, { FinalCTASection, PricingSection, TeamSection, Testimonials, WhatDoesProppoDo, WhoGetsWhat, WhyChooseProppo } from '@/components/Sections'
+import WhoIsProppoFor, { FinalCTASection, HowDoesProppoWork, PricingSection, TeamSection, Testimonials, WhatDoesProppoDo, WhoGetsWhat, WhyChooseProppo } from '@/components/Sections'
 import { useTheme } from 'next-themes'
 import React, { useEffect } from 'react'
 
@@ -15,6 +15,7 @@ export default function page() {
     <>
       <NavBar/>
       <Hero/>
+      <HowDoesProppoWork/>
       <WhoIsProppoFor/>
       <WhyChooseProppo/>
       <WhatDoesProppoDo/>
