@@ -105,6 +105,31 @@ export default function WhoIsProppoFor() {
   )
 }
 
+export function HowDoesProppoWork() {
+
+  return (
+    <div className="py-16 mt-32 md:mt-0">
+      <motion.div
+        className="flex items-center flex-col text-center gap-2 mt-12 md:mt-0"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
+      >
+        <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl">
+          How does <span className="bl_un">Proppo</span> work?
+        </h1>
+        {/* <p className='text-xs text-center md:text-left md:text-xl text-gray-800/80 italic mt-2 bg-blue-800/5 p-1 px-2 border-r-[#6840ff] border-r-2 max-w-[90vw] dark:bg-white/5 dark:border-r-white dark:text-white'>
+          If you’ve ever cursed at an Excel sheet at 2 AM 😤📊🌙, we made this for you. 🙌
+        </p> */}
+      </motion.div>
+      <div className="relative w-[90%] md:w-[70%] mx-auto mt-8 md:mt-12 overflow-hidden rounded-2xl h-[42vh] md:h-[36vh] lg:h-[68vh] border border-[#6840ff]">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dqbUpg-Qhqs?si=fuMLWt3RQ_VFZXW1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  )
+}
+
 export function WhatDoesProppoDo() {
   const wdpd_data = [
     {
