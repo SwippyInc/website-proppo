@@ -182,6 +182,9 @@ export function WhatDoesProppoDo() {
           )
         })}
       </div>
+      <div className="relative w-[90%] md:w-[80%] mx-auto mt-8 overflow-hidden rounded-2xl h-[25vh] md:h-[50vh] lg:h-[80vh]">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-qYmBNs4AQw?si=cwq3DpxMA9tuDFWe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
   )
 }
