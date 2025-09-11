@@ -82,7 +82,6 @@ export function GetStartedForm({ hideFun }) {
 
   async function handleSubmit(e){
     e.preventDefault()
-    setSubmitting(true)
     let {email,phone} = state
     let isValidMail = isValidEmail(email)
     let isValidPhone = isValidIndianMobile(phone)
@@ -98,6 +97,7 @@ export function GetStartedForm({ hideFun }) {
       setMessage('Please enter a valid mobile number')
       return
     }
+    setSubmitting(true)
     let htmlMessage = generateHTML()
     let obj = {htmlMessage,receipent:'aniket@swippy.in',subject:'New Signup Request',senderName:"Proppo",emailType:'signup'}
     Data.send_mail(obj).then(d=>{
