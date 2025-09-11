@@ -5,7 +5,6 @@ import proppo_white_logo from '../public/images/proppo_logo.png'
 
 import Link from "next/link";
 import { motion } from 'framer-motion'
-import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 // Animation variants
 const fadeInUp = {
@@ -21,6 +20,7 @@ const scaleIn = {
 export default function Footer() {
   const links = [
     {name:'Instagram',url:'https://www.instagram.com/swippytech/',icon:'instagram_logo'},
+    {name:'Facebook',url:'https://www.facebook.com/swippycrm/',icon:'fb_logo'},
     {name:'YouTube',url:'https://www.youtube.com/@SwippyTech',icon:'youtube_logo'},
     {name:'X',url:'https://x.com/Swippy_tech',icon:'x_logo'},
     {name:'LinkedIn',url:'https://in.linkedin.com/company/swippytech',icon:'linkedin_logo'},
