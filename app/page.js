@@ -15,14 +15,14 @@ export default function page() {
     <>
       <NavBar/>
       <Hero/>
-      <HowDoesProppoWork/>
+      {/* <HowDoesProppoWork/> */}
       <WhoIsProppoFor/>
       <WhyChooseProppo/>
       <WhatDoesProppoDo/>
       <WhoGetsWhat/>
       <PricingSection/>
       <Testimonials/>
-      <TeamSection/>
+      {/* <TeamSection/> */}
       <FinalCTASection/>
       <Footer/>
       <span id='alert_wrap'></span>
