@@ -33,7 +33,7 @@ export default function Pricing() {
           return (
             <div
               key={index}
-              className="flex items-center flex-col bg-white rounded-4xl shadow-lg justify-start gap-2 py-8 shadow-[#6840ff]/5 border border-gray-200/50 dark:bg-black/90 dark:border-gray-800/50 relative"
+              className="flex items-center flex-col bg-white rounded-4xl shadow-xl justify-start gap-2 py-8 shadow-[#6840ff]/10 border border-gray-200 dark:bg-black/90 dark:border-gray-800/50 relative"
             >
             {off>0 && <div className="absolute -top-2 left-[50%] translate-x-[-50%] bg-[#6840ff] text-white px-2 py-1 rounded-t rounded-b-xl">
                 {off}% off
@@ -42,6 +42,9 @@ export default function Pricing() {
                 <p className="text-xl font-medium mb-2">{name}</p>
                 <p className="text-2xl md:text-4xl font-bold text-[#6840ff] mb-2">₹{cost} <span className="text-base font-normal">/room/month</span></p>
                 <p className="text-xs opacity-80 mb-2">Minimum ₹2000/month</p>
+                <p className="w-full mt-4 max-w-[90vw] text-xs opacity-70 italic bg-blue-800/5 p-1 px-2 border-r-[#6840ff] border-r-2 dark:bg-white/5 dark:border-r-white dark:text-white text-center">
+                GST: 0-7,500 = 5% | 7,500+ = 18%
+                </p>
                 <ul className="list-none text-xs md:text-sm mt-8">
                     {features.map((feature, i) => (
                         <li key={i} className={`my-3 ${i !== 0 ? 'border-t border-t-gray-200/50 pt-3 dark:border-gray-100/10' : ''}`}>{feature}</li>
