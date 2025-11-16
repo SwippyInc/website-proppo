@@ -3,9 +3,9 @@ import { NavBar1 } from "@/components/NavBar"
 import Footer from "@/components/Footer"
 export default function Pricing() {
     const pricing_data = [
-        {name:'Yearly',cost:135,off:10},
-        {name:'Half Yearly/Quaterly',cost:143,off:5},
-        {name:'Monthly',cost:150,off:0},
+        {name:'Yearly',cost:45,off:10},
+        {name:'Half Yearly/Quaterly',cost:48,off:5},
+        {name:'Monthly',cost:50,off:0},
     ]
     const features = [
         '📋 Unlimited Property Listings',
@@ -40,11 +40,8 @@ export default function Pricing() {
             </div>}
               <div className="p-2 md:px-6">
                 <p className="text-xl font-medium mb-2">{name}</p>
-                <p className="text-2xl md:text-4xl font-bold text-[#6840ff] mb-2">₹{cost} <span className="text-base font-normal">/room/month</span></p>
+                <p className="text-2xl md:text-4xl font-bold text-[#6840ff] mb-2">₹{cost}<span className="text-base font-normal">/room/month</span></p>
                 <p className="text-xs opacity-80 mb-2">Minimum ₹2000/month</p>
-                <p className="w-full mt-4 max-w-[90vw] text-xs opacity-70 italic bg-blue-800/5 p-1 px-2 border-r-[#6840ff] border-r-2 dark:bg-white/5 dark:border-r-white dark:text-white text-center">
-                GST: 0-7,500 = 5% | 7,500+ = 18%
-                </p>
                 <ul className="list-none text-xs md:text-sm mt-8">
                     {features.map((feature, i) => (
                         <li key={i} className={`my-3 ${i !== 0 ? 'border-t border-t-gray-200/50 pt-3 dark:border-gray-100/10' : ''}`}>{feature}</li>
