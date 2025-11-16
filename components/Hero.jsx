@@ -68,7 +68,7 @@ export default function Hero() {
                   className='text-sm text-center md:text-left md:text-xl text-gray-800/80 dark:text-white'
                   variants={fadeInUp}
                 >
-                  Reservations, OTAs, check-ins, food ordering Proppo handles it all for <span className='font-medium'>₹150/room/month</span>.
+                  Reservations, OTAs, check-ins, food ordering Proppo handles it all for <span className='font-medium'>₹50/room/month</span>.
                 </motion.p>
                 <motion.p
                   className='text-xs md:text-sm opacity-70 italic bg-blue-800/5 dark:bg-white/5 p-1 px-2 border-r-2 border-r-[#6840ff] dark:border-r-white'
