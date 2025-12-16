@@ -63,7 +63,7 @@ function ThankYouContent() {
       </motion.div>
 
       <motion.div className="flex items-center justify-center gap-2 md:gap-4" variants={bounceIn}>
-        <Button styles="btn_pri text-sm md:text-lg px-5" onClick={() => router.push("/")}>
+        <Button styles="btn_pri text-sm md:text-lg px-5" onClick={() => router.back()}>
           👉 Back to Home
         </Button>
       </motion.div>

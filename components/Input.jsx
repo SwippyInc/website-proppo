@@ -49,11 +49,11 @@ export function PhoneNumberInput(props) {
       <PhoneInput
         placeholder="9876543210"
         defaultCountry="IN"
-        className={`input_box relative ${error && 'ring-1 ring-red'}`}
+        className={`block w-full p-3 rounded-xl transition duration-300 border border-[#ccc] hover:border-[#6840ff]/50 focus:border-[#6840ff] outline-none relative ${error ? 'ring-1 ring-red-500 bg-red-500/5' : 'bg-blue-800/5'}`}
         onChange={handleChange}
         value={value}
         />
-      {error && <p className="text-xs text-red text-left absolute -bottom-5 left-2 flex gap-1 items-center justify-start"><AlertCircle size={12} className="-mt-[2px]"/> {error}</p>}
+      {error && <p className="text-xs text-red-500 text-left absolute -bottom-5 left-2 flex gap-1 items-center justify-start"><AlertCircle size={12} className="-mt-[2px]"/> {error}</p>}
     </div>
   )
 }

@@ -49,9 +49,9 @@ export default function NavBar() {
               <button className="menu_toggle" role='button' onClick={()=>{
                 document.querySelector('nav')?.classList.toggle('show')
               }}><div className='menu_line'></div></button>
-              <div className="md:-mb-1 md:ml-1 lg:ml-[-4px]">
+              {/* <div className="md:-mb-1 md:ml-1 lg:ml-[-4px]">
                 <ModeToggle/>
-              </div>
+              </div> */}
             </div>
         </div>
     </nav>

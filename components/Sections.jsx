@@ -383,7 +383,7 @@ export function PricingSection() {
         >
           <div className="p-6 md:p-8 rounded-3xl bg-white/70 shadow-lg shadow-[#6840ff]/5 border border-gray-200/50 dark:bg-black/90 dark:border-gray-800/50">
             <h2 className="font-medium text-xl md:text-3xl mb-4">Pricing Plans</h2>
-            <p className="text-2xl md:text-4xl font-bold text-[#6840ff] mb-2">₹150 <span className="text-base font-normal">/room/month</span></p>
+            <p className="text-2xl md:text-4xl font-bold text-[#6840ff] mb-2">₹50<span className="text-base font-normal">/room/month</span></p>
             <p className="text-sm md:text-lg opacity-80 mb-2">Minimum ₹2000/month</p>
             <p className="text-sm md:text-lg italic opacity-70 mb-4">
               Quarterly, Half-Yearly (<span className="font-medium">5% off</span>), or Yearly (<span className="font-medium">10% off</span>)
