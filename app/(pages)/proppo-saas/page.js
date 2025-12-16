@@ -65,7 +65,7 @@ export default function LandingPage() {
     </nav>
 
     {/* hero section */}
-    <section className="flex items-center justify-center relative flex-col pb-8 md:pb-12 lg:pb-20" id="home">
+    <section className="flex items-center justify-center relative flex-col pb-8 md:pb-12 lg:pb-20 wcp" id="home">
       <Image src={IMAGES.bookings} height={1000} width={1000} alt="" className="h-full w-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5"/>
       <div className="py-8 pt-40 flex flex-col items-center justify-center text-center w-[90%] lg:w-[80%] gap-6 relative">
         <h1 className="font-bold text-5xl lg:text-8xl" style={{lineHeight:'120%'}}>Hotel PMS<br/><span className="bl_un">Made Simple</span></h1>
@@ -77,7 +77,7 @@ export default function LandingPage() {
     </section>
 
     {/* features */}
-    <section className="min-h-screen py-8 md:py-16 wcp" id="features">
+    <section className="py-8 md:py-16 wcp" id="features">
       <motion.div
         className="flex items-center flex-col text-center gap-2 mt-8 md:mt-0"
         initial="hidden"
@@ -154,7 +154,7 @@ export default function LandingPage() {
           })}
         </motion.div>
       </div>
-      <div className="flex flex-wrap gap-4 lg:gap-8 items-center justify-start lg:justify-center w-[90%] md:w-[80%] mx-auto mt-8 md:mt-12 mb-16">
+      <div className="flex flex-wrap gap-4 lg:gap-8 items-center justify-start lg:justify-center w-[80%] md:w-[80%] mx-auto mt-8 md:mt-12 mb-12">
           {highlights.map((h,i)=>{
             return(
               <div key={i} className="flex items-center justify-start gap-3 lg:gap-4">
