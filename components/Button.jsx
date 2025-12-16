@@ -17,7 +17,7 @@ export function GoBackButton(){
   return <Link
     href="/"
     style={{zIndex:5}}
-    className="fixed bottom-4 right-4 bg-[#6840ff] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium shadow-lg hover:bg-[#6840ff]/80 transition-colors dark:bg-white dark:text-black dark:hover:text-white"
+    className="fixed bottom-4 right-4 bg-blue text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium shadow-lg hover:bg-blue/80 transition-colors dark:bg-white dark:text-black dark:hover:text-white"
   >
     Go Back
   </Link>
@@ -26,7 +26,7 @@ export function GoBackButton(){
 export function NextButton(props) {
   let {text} = props
 return (
-  <button {...props} className={` text-white rounded-xl p-4 px-6 md:px-12 transition duration-500 text-sm md:text-xl min-w-[200px] bg-[#6840ff] disabled:opacity-40 disabled:pointer-events-none`}>{text}</button>
+  <button {...props} className={` text-white rounded-xl p-4 px-6 md:px-12 transition duration-500 text-sm md:text-xl min-w-[200px] bg-blue disabled:opacity-40 disabled:pointer-events-none`}>{text}</button>
 )
 }
 
