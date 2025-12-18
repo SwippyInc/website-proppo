@@ -30,13 +30,13 @@ export default function Footer() {
   return (
     <footer className="py-16 bg-[#6840ff]/5">
       <motion.div
-        className="w-[90%] md:w-[80%] mx-auto"
+        className=""
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  w_80_90">
           <motion.div
             className="flex flex-col items-start justify-start"
             variants={scaleIn}
