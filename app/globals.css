@@ -208,4 +208,7 @@ body.noscroll{height:100vh;overflow: hidden;}
   * {
     @apply border-border outline-ring/50;}
   body {
-    @apply bg-background text-foreground;}}
+    @apply bg-background text-foreground;}
+  .w_80_90{@apply w-[90%] lg:w-[85%] mx-auto}
+  .cover_img{@apply h-full w-full object-cover}
+}
