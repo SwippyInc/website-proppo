@@ -54,8 +54,8 @@ export default function Hero() {
                   className="flex items-center justify-center md:justify-start gap-1"
                   variants={slideInLeft}
                 >
-                  <div className="text-[10px] md:text-sm bg-[#6840ff]/5 text-[#6840ff] dark:text-white dark:bg-white/5 w-fit text-blue text-center rounded-3xl p-1 px-3 italic font-medium">#Proppo</div>
-                  <div className="text-[10px] md:text-sm bg-[#6840ff]/5 text-[#6840ff] dark:text-white dark:bg-white/5 w-fit text-blue text-center rounded-3xl p-1 px-3 italic font-medium">#PropertyManagementSystem</div>
+                  <div className="text-[10px] md:text-sm bg-[#6840ff]/5 dark:text-white dark:bg-white/5 w-fit text-blue text-center rounded-3xl p-1 px-3 italic font-medium">#Proppo</div>
+                  <div className="text-[10px] md:text-sm bg-[#6840ff]/5 dark:text-white dark:bg-white/5 w-fit text-blue text-center rounded-3xl p-1 px-3 italic font-medium">#PropertyManagementSystem</div>
                 </motion.div>
                 <motion.h1
                   style={{lineHeight:'110%'}}
