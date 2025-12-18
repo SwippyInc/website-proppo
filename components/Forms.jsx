@@ -247,13 +247,13 @@ export function GetDemoForm({ hideFun }) {
   async function handleSubmit(e){
     e.preventDefault()
     let {phone} = state
-    let isValidPhone = isValidIndianMobile(phone)
-    if(!isValidPhone){
-      setIsError(true)
-      setSuccess(false)
-      setMessage('Please enter a valid mobile number')
-      return
-    }
+    // let isValidPhone = isValidIndianMobile(phone)
+    // if(!isValidPhone){
+    //   setIsError(true)
+    //   setSuccess(false)
+    //   setMessage('Please enter a valid mobile number')
+    //   return
+    // }
     setSubmitting(true)
     let htmlMessage = generateHTML()
     let obj = {htmlMessage,receipent:'aniket@swippy.in',subject:'Demo Request',senderName:"Proppo",emailType:'demo'}
@@ -290,7 +290,7 @@ export function GetDemoForm({ hideFun }) {
       <p className={`text-xs md:text-sm italic mt-2 p-1 px-2  border-r-2 max-w-[80vw] dark:bg-white/5 dark:border-r-white dark:text-white w-fit mx-auto ${isError ? 'border-r-red-500 text-red-500 bg-red-500/5' : success ? 'border-r-green-500 text-green-500 bg-green-500/5' : 'border-r-[#6840ff] text-gray-800/80 bg-blue-800/5'}`}>{message}</p>
       <form onSubmit={handleSubmit} className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 text-left mx-auto w-[95%]">
-          <Input label="Name" value={state.name} onChange={e=>setState(s=>({...s,name:e.target.value}))} placeholder="Rakesh Kumar"/>
+          <Input label="Name" value={state.name} onChange={e=>setState(s=>({...s,name:e.target.value}))} placeholder="John Doe"/>
           {/* <Input type="phone" label="Mobile" value={state.phone} onChange={e=>setState(s=>({...s,phone:e.target.value}))} placeholder="9876543210"/> */}
           {/* label,fun,val,styles */}
           <PhoneNumberInput label="Mobile" val={state.phone} fun={e=>setState(s=>({...s,phone:e}))} placeholder="9876543210"/>
@@ -298,7 +298,7 @@ export function GetDemoForm({ hideFun }) {
           <Input label="Remarks" value={state.anything_else} onChange={e=>setState(s=>({...s,anything_else:e.target.value}))} placeholder="Special requirements..."/>
         </div>
         <div className="flex items-center justify-center gap-2">
-          <Button disabled={disabled || submitting} styles="btn_pri md:text-lg px-5 disabled:pointer-events-none disabled:opacity-50">Book Now</Button>
+          <Button disabled={disabled || submitting} styles="btn_pri md:text-lg px-5 disabled:pointer-events-none disabled:opacity-50 mb-8 lg:mb-0">Book Now</Button>
         </div>
       </form>
     </div>
