@@ -51,7 +51,7 @@ function ThankYouContent() {
     >
       <motion.div className="flex items-center flex-col text-center gap-4 mb-8 md:mb-12" variants={scaleIn}>
         <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-gray-800 dark:text-white">
-          {isSignup ? "Signup Request" : "Demo Request"} <span className="bl_un">{isSignup ? "Submitted!" : "Booked!"}</span>{" "}
+          {isSignup ? "Signup Request" : "Demo Request"} <span className="bl_un">{isSignup ? "Submitted!" : "Submitted!"}</span>{" "}
           🎉
         </h1>
         <p className="text-sm md:text-xl text-gray-800/80 max-w-[90%] md:max-w-[80%] mx-auto mt-2 dark:text-white/80">
