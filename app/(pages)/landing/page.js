@@ -84,7 +84,7 @@ export default function LandingPage() {
                 >
                     PMS <span className="font-medium text-gray-400">+</span> Website Builder + Booking Engine
                 </motion.h1> */}
-                <h1 style={{lineHeight:'110%'}} className="text-center md:text-left text-3xl md:text-4xl lg:text-6xl font-medium text-gray-400">
+                <h1 style={{lineHeight:'110%'}} className="text-center md:text-left text-4xl md:text-4xl lg:text-6xl font-medium text-gray-400 mb-2">
                     <span className="font-semibold">PMS</span> + <span className="font-semibold">Website Builder</span> + <span className="font-semibold">Booking Engine</span>
                 </h1>
                 <motion.p
@@ -95,7 +95,7 @@ export default function LandingPage() {
                 </motion.p>
             </motion.div>
             <motion.div
-                className="flex-center-jc h-fit md:h-auto order-1 lg:order-2 mt-[20vh] lg:mt-0"
+                className="flex-center-jc h-fit md:h-auto order-1 lg:order-2 mt-[16vh] lg:mt-0"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -109,9 +109,9 @@ export default function LandingPage() {
         <div className="flex items-center justify-start gap-2 md:gap-3 lg:gap-4 flex-wrap w-[90%] lg:w-[80%] mx-auto mb-8 lg:mb-16">
             {features.map((f,i)=>{
                 let {name,image} = f
-                return <div key={i} className="flex items-center justify-start p-1/2 px-2 rounded-full bg-blue/5 backdrop-blur-sm text-blue text-xs md:text-sm lg:text-xl lg:p-2 lg:px-4">
+                return <div key={i} className="flex items-center justify-start p-1/2 px-2 rounded-full bg-blue/5 backdrop-blur-sm text-blue text-sm lg:text-xl lg:p-2 lg:px-4">
                     <div className="aspect-square rounded-full grid items-center p-2">
-                        <Image src={image} alt={name} height={100} width={100} className="h-4 md:h-8 w-auto object-contain"/>
+                        <Image src={image} alt={name} height={100} width={100} className="h-6 md:h-8 w-auto object-contain"/>
                     </div>
                     <p className="font-medium mr-2">{name}</p>
                 </div>
@@ -122,15 +122,15 @@ export default function LandingPage() {
                 <p className="font-medium text-blue text-lg md:text-xl lg:text-4xl">All-in-One Plan</p>
                 <div className="bg-blue text-white rounded-4xl p-2 px-4 lg:px-8 uppercase text-xs md:text-base lg:text-lg" style={{letterSpacing:'2px'}}>Best Value</div>
             </div>
-            <p className="text-4xl md:text-6xl lg:text-8xl text-blue font-semibold">₹999<span className="font-normal text-gray-500" style={{fontSize:'40%'}}>/month</span></p>
+            <p className="text-5xl md:text-6xl lg:text-8xl text-blue font-semibold">₹999<span className="font-normal text-gray-500" style={{fontSize:'40%'}}>/month</span></p>
             <div>
                 {highlights.map((h,i)=>{
                 return(
                 <div key={i} className={`flex items-center justify-start gap-3 lg:gap-4 py-3 lg:py-4 ${i == 0 ? '' : 'border-t border-gray-200'}`}>
                     <div className="aspect-square bg-blue text-white rounded-full p-1 md:p-2 lg:p-4">
-                    <Check strokeWidth={3} className="h-3 md:h-6 w-auto"/>
+                    <Check strokeWidth={3} className="h-4 md:h-6 w-auto"/>
                     </div>
-                    <p className="text-sm md:text-2xl  text-gray-600">{h}</p>
+                    <p className="md:text-xl lg:text-2xl  text-gray-600">{h}</p>
                 </div>
                 )
             })}
