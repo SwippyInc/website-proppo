@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from "@/app/functions"
+import { cn } from "@/lib/utils"
 import { AlertCircle } from "lucide-react"
 import Link from "next/link"
 import PhoneInput, {isValidPhoneNumber} from 'react-phone-number-input'
