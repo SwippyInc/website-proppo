@@ -22,7 +22,8 @@ import electronic_ticket from './public/icons/electronic-ticket.png'
 import wdpd from './public/images/wdpd.png'
 import proppo_logo from './public/images/proppo_logo.png'
 import member_image from './public/images/member.png'
+import proppo_screenshots from './public/images/proppo_screenshots.png'
 
 export const IMAGES = {
-    homestay, hotel_managers, hotel_owners, vacation_rentals, affordable, all_in_one, booking_engine, channel_manager, pms, profits, qr_menu, sync, virtual_inventory, web_checkin, wdpd, member_image, proppo_logo, electronic_ticket, hotels, homestays, guest_house, villas
+    homestay, hotel_managers, hotel_owners, vacation_rentals, affordable, all_in_one, booking_engine, channel_manager, pms, profits, qr_menu, sync, virtual_inventory, web_checkin, wdpd, member_image, proppo_logo, electronic_ticket, hotels, homestays, guest_house, villas, proppo_screenshots
 }
