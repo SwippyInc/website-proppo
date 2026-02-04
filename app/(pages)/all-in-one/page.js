@@ -72,7 +72,7 @@ export default function LandingPage() {
             animate="visible"
             variants={scaleIn}
         >
-            <Image height={1000} width={1000} src={IMAGES.hero_bg_img} alt='' className='opacity-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full object-cover blur-xs' />
+            <Image height={1000} width={1000} src={IMAGES.hero_bg_img} alt='' className='opacity-50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full object-cover blur-xs' />
         </motion.div>
         <div className="relative w-[90%] lg:w-[80%] mx-auto flex items-center justify-center h-full flex-col gap-4 text-center text-white">
             <div className="text-xs md:text-sm lg:text-xl bg-white/10 backdrop-blur-xl rounded-3xl p-1 px-3 font-medium">#1 Hospitality Platform</div>

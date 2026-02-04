@@ -16,6 +16,12 @@ import hotels from './public/icons/hotels.png'
 import homestays from './public/icons/homestays.png'
 import guest_house from './public/icons/guest_house.png'
 import villas from './public/icons/villas.png'
+import payment_gateway from './public/icons/payment_gateway.png'
+import kitchen_management from './public/icons/kitchen_management.png'
+import kitchen_pos from './public/icons/kitchen_pos.png'
+import whatsapp from './public/icons/whatsapp.png'
+import hotel_website from './public/icons/hotel_website.png'
+import hero_bg_img from './public/images/hero_bg_img.webp'
 import electronic_ticket from './public/icons/electronic-ticket.png'
 
 // images
@@ -25,5 +31,5 @@ import member_image from './public/images/member.png'
 import proppo_screenshots from './public/images/proppo_screenshots.png'
 
 export const IMAGES = {
-    homestay, hotel_managers, hotel_owners, vacation_rentals, affordable, all_in_one, booking_engine, channel_manager, pms, profits, qr_menu, sync, virtual_inventory, web_checkin, wdpd, member_image, proppo_logo, electronic_ticket, hotels, homestays, guest_house, villas, proppo_screenshots
+    homestay, hotel_managers, hotel_owners, vacation_rentals, affordable, all_in_one, booking_engine, channel_manager, pms, profits, qr_menu, sync, virtual_inventory, web_checkin, wdpd, member_image, proppo_logo, electronic_ticket, hotels, homestays, guest_house, villas, proppo_screenshots, hero_bg_img, payment_gateway, kitchen_management, kitchen_pos, whatsapp, hotel_website
 }
