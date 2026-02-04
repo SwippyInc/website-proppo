@@ -65,7 +65,7 @@ export default function Footer() {
             <p className="text-lg font-semibold mb-4"><span className="bl_un">Contact</span> Us</p>
             <ul className="list-none flex flex-col gap-1 text-xs md:text-sm leading-5">
               <li>
-                Swippy Tect LLP<br />
+                Swippy Tech LLP<br />
                 Kasumpti, Shimla (HP) - 171009
               </li>
               <li><Link href="mailto:mail@proppo.in" title="Mail Us" className="hover:text-[#6840ff] transition-colors">mail@proppo.in</Link></li>
