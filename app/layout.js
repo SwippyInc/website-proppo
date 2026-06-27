@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import ClientGoogleAnalytics from "@/components/ClientGoogleAnalytics";
+import ClarityInit from "@/components/ClarityInit";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${poppins.className}`}>
         <ClientGoogleAnalytics GTM_ID="GTM-M2QT2W4N" />
+        <ClarityInit />
         {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange> */}
           {children}
         {/* </ThemeProvider> */}
