@@ -31,7 +31,7 @@ return (
 }
 
 export function RoundButton1(props){
-  let {children,classes,url,fun,bgNone} = props
+  let {children,classes,url,fun,bgNone,...rest} = props
   let class_string = `h-8 w-8 flex items-center justify-center mr-2 rounded-full text-sm ${classes} ${bgNone?'bg-none':'bg-gray-400/20'} duration-300 hover:bg-gray-400/40 disabled:pointer-events-none disabled:opacity-50`
   if (url){
       return(
@@ -41,7 +41,7 @@ export function RoundButton1(props){
       )
   }
   return(
-      <button className={class_string} onClick={fun?fun:null} {...props} style={{zIndex:4}}>
+      <button className={class_string} onClick={fun?fun:null} {...rest} style={{zIndex:4}}>
           {children}
       </button>
   )
