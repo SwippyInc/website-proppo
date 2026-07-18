@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+Date: Sat, 18 Jul 2026 05:25:11 GMT
+Content-Type: application/zip
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Correlation-ID: 4647bf6c-5151-445d-a56c-8229b6605a3d
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Disposition: attachment; filename="Invoices_2026-07-17_to_2026-07-18.zip"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+

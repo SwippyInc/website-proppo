@@ -5,17 +5,16 @@ import proppo_white_logo from '../public/images/proppo_logo.png'
 
 import Link from "next/link";
 import { motion } from 'framer-motion'
+import { PRODUCT_CATEGORIES, SOLUTIONS } from '@/constants'
 
-// Animation variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
 }
 
-const scaleIn = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } }
-}
+const linkClass = "hover:text-brand-primary transition-colors"
+const listClass = "list-none flex flex-col gap-2.5 text-sm text-ink-secondary"
+const headingClass = "text-xs font-semibold uppercase tracking-widest text-ink mb-4"
 
 export default function Footer() {
   const links = [
@@ -28,67 +27,82 @@ export default function Footer() {
     {name:'Crunchbase',url:'https://www.crunchbase.com/organization/swippy-tech',icon:'crunchbase_logo'},
   ]
   return (
-    <footer className="py-16 bg-[#6840ff]/5">
+    // extra bottom padding on mobile keeps content clear of the NavBar's sticky CTA bar
+    <footer className="pt-14 pb-24 md:pb-10 bg-surface-bg-alt border-t border-line">
       <motion.div
-        className=""
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUp}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  w_80_90">
-          <motion.div
-            className="flex flex-col items-start justify-start"
-            variants={scaleIn}
-          >
-            <Image src={proppo_white_logo} height={100} width={300} className="h-10 w-auto" alt="Proppo" />
-            <p className="text-[8px] opacity-80 text-gray-800 uppercase mt-2 tracking-widest dark:text-white">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w_80_90">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1 flex flex-col items-start gap-3">
+            <Image src={proppo_white_logo} height={100} width={300} className="h-8 w-auto" alt="Proppo" />
+            <p className="text-[10px] text-ink-muted uppercase tracking-widest">
               Copyright &copy; Proppo. All Rights Reserved.
             </p>
-          </motion.div>
-          <motion.div
-            className="text-gray-800 dark:text-white"
-            variants={fadeInUp}
-          >
-            <p className="text-lg font-semibold mb-4"><span className="bl_un">Quick</span> Links</p>
-            <ul className="list-none flex flex-col gap-2 text-xs md:text-sm leading-4">
-              <li><Link href="/termsandconditions" className="hover:text-[#6840ff] transition-colors">Terms of Service</Link></li>
-              <li><Link href="/privacy-policy" className="hover:text-[#6840ff] transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/refundandcancellation" className="hover:text-[#6840ff] transition-colors">Refund and Cancellation Policy</Link></li>
-              <li><Link href="/data-deletion" className="hover:text-[#6840ff] transition-colors">Data Policy</Link></li>
+          </div>
+          <div>
+            <p className={headingClass}>Product</p>
+            <ul className={listClass}>
+              <li><Link href="/product" className={linkClass}>Overview</Link></li>
+              {PRODUCT_CATEGORIES.map((category) => (
+                <li key={category.name}><Link href={category.href} className={linkClass}>{category.name}</Link></li>
+              ))}
             </ul>
-          </motion.div>
-          <motion.div
-            className="text-gray-800 dark:text-white"
-            variants={fadeInUp}
-          >
-            <p className="text-lg font-semibold mb-4"><span className="bl_un">Contact</span> Us</p>
-            <ul className="list-none flex flex-col gap-1 text-xs md:text-sm leading-5">
+          </div>
+          <div>
+            <p className={headingClass}>Solutions</p>
+            <ul className={listClass}>
+              {SOLUTIONS.map((solution) => (
+                <li key={solution.name}><Link href={solution.href} className={linkClass}>{solution.name}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className={headingClass}>Company</p>
+            <ul className={listClass}>
+              <li><Link href="/pricing" className={linkClass}>Pricing</Link></li>
+              <li><Link href="/resources" className={linkClass}>Resources</Link></li>
+              <li><Link href="/resources/case-studies" className={linkClass}>Case Studies</Link></li>
+            </ul>
+          </div>
+          <div>
+            <p className={headingClass}>Legal</p>
+            <ul className={listClass}>
+              <li><Link href="/termsandconditions" className={linkClass}>Terms of Service</Link></li>
+              <li><Link href="/privacy-policy" className={linkClass}>Privacy Policy</Link></li>
+              <li><Link href="/refundandcancellation" className={linkClass}>Refund and Cancellation</Link></li>
+              <li><Link href="/data-deletion" className={linkClass}>Data Policy</Link></li>
+            </ul>
+          </div>
+          <div>
+            <p className={headingClass}>Contact</p>
+            <ul className="list-none flex flex-col gap-2 text-sm text-ink-secondary leading-relaxed">
               <li>
                 Swippy Tech LLP<br />
                 Kasumpti, Shimla (HP) - 171009
               </li>
-              <li><Link href="mailto:mail@proppo.in" title="Mail Us" className="hover:text-[#6840ff] transition-colors">mail@proppo.in</Link></li>
-              <li><Link href="tel:+919418855294" title="Call Us" className="hover:text-[#6840ff] transition-colors">+91 94188 55294</Link></li>
+              <li><Link href="mailto:mail@proppo.in" title="Mail Us" className={linkClass}>mail@proppo.in</Link></li>
+              <li><Link href="tel:+919418855294" title="Call Us" className={linkClass}>+91 94188 55294</Link></li>
             </ul>
-          </motion.div>
-          <motion.div
-            className="text-gray-800 dark:text-white w-full flex items-start lg:items-center justify-center flex-col lg:flex-row md:col-span-2 lg:col-span-3 lg:justify-between gap-2 lg:gap-0"
-            variants={fadeInUp}
-          >
-            <p className="text-xs md:text-sm italic text-gray-800/80 bg-blue-800/5 p-1 px-2 border-r-[#6840ff] border-r-2 dark:bg-white/5 dark:border-r-white dark:text-white">
-              Built with ❤️ by Proppo
-            </p>
-            <ul className="flex items-center justify-start gap-1 lg:w-[32%]">
-              {links.map((link,index)=>{
-                let {name,url,icon} = link
-                return <Link className="flex items-center justify-center flex-col border rounded-full p-2 transition duration-300 hover:border-[#6840ff]" key={index} href={url} target="_blank" title={name}>
-                <img src={`/icons/${icon}.png`} className="w-6 lg:w-4 object-contain"/>
-                  {/* <Image src={icon} className="h-8 object-contain"/> */}
-                </Link>
-              })}
-            </ul>
-          </motion.div>
+          </div>
+        </div>
+        <div className="w_80_90 mt-10 pt-6 border-t border-line flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <p className="text-xs italic text-ink-muted">Built with ❤️ by Proppo</p>
+          <ul className="flex items-center gap-1.5 flex-wrap">
+            {links.map((link) => (
+              <Link
+                className="flex items-center justify-center border border-line rounded-full p-2 transition duration-300 hover:border-brand-primary bg-surface-card"
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                title={link.name}
+              >
+                <img src={`/icons/${link.icon}.png`} alt={link.name} className="w-4 object-contain" />
+              </Link>
+            ))}
+          </ul>
         </div>
       </motion.div>
     </footer>

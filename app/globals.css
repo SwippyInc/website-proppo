@@ -38,7 +38,30 @@
   --sidebar-accent:oklch(0.97 0 0);
   --sidebar-accent-foreground:oklch(0.205 0 0);
   --sidebar-border:oklch(0.922 0 0);
-  --sidebar-ring:oklch(0.708 0 0)}
+  --sidebar-ring:oklch(0.708 0 0);
+
+  /* v2 brand tokens (proppo-site-spec.md Section 1) — additive, legacy pages keep using --blue/.btn_pri/.btn_sec */
+  --brand-primary:#6840ff;
+  --brand-primary-dark:#4826c3;
+  --brand-primary-light:#7f5df7;
+  --brand-accent:#6840ff;
+  --brand-accent-light:#D9B679;
+  --surface-bg:#6840ff10;
+  --surface-bg-alt:#6840ff10;
+  --surface-card:#FFFFFF;
+  --surface-overlay-dark:#12201C;
+  --ink:#211E19;
+  --ink-secondary:#5C574D;
+  --ink-muted:#8B8578;
+  --ink-inverse:#FBF8F2;
+  --line:#E3DDCE;
+  --line-strong:#C9C1AC;
+  --semantic-success:#2F7A4F;
+  --semantic-warning:#B8873F;
+  --semantic-error:#B44A3F;
+  --semantic-info:#3D6A7A;
+  --radius-pill:999px;
+}
 *{box-sizing: border-box;}
 
 ::selection {
@@ -95,6 +118,30 @@ button{cursor: pointer;}
   --radius-md:calc(var(--radius) - 2px);
   --radius-lg:var(--radius);
   --radius-xl:calc(var(--radius) + 4px);
+  --radius-pill:var(--radius-pill);
+
+  --font-display:var(--font-display);
+  --font-body:var(--font-body);
+
+  --color-brand-primary:var(--brand-primary);
+  --color-brand-primary-dark:var(--brand-primary-dark);
+  --color-brand-primary-light:var(--brand-primary-light);
+  --color-brand-accent:var(--brand-accent);
+  --color-brand-accent-light:var(--brand-accent-light);
+  --color-surface-bg:var(--surface-bg);
+  --color-surface-bg-alt:var(--surface-bg-alt);
+  --color-surface-card:var(--surface-card);
+  --color-surface-overlay-dark:var(--surface-overlay-dark);
+  --color-ink:var(--ink);
+  --color-ink-secondary:var(--ink-secondary);
+  --color-ink-muted:var(--ink-muted);
+  --color-ink-inverse:var(--ink-inverse);
+  --color-line:var(--line);
+  --color-line-strong:var(--line-strong);
+  --color-semantic-success:var(--semantic-success);
+  --color-semantic-warning:var(--semantic-warning);
+  --color-semantic-error:var(--semantic-error);
+  --color-semantic-info:var(--semantic-info);
 }
 
 body {
@@ -112,11 +159,20 @@ body {
 .btn:disabled{pointer-events: none;opacity: .5;}
 .btn_pri{color:var(--white);background:var(--blue);border:1px solid var(--blue)}
 .btn_sec{color:var(--blue);background:var(--blue_faded1);border:1px solid #eee}
+/* v2 buttons (spec tokens) — use on v2 pages instead of the legacy purple .btn_pri/.btn_sec */
+.btn_v2_pri{color:var(--ink-inverse);background:var(--brand-primary);border:1px solid var(--brand-primary);border-radius:var(--radius-pill)}
+.btn_v2_pri:hover{background:var(--brand-primary-dark);border-color:var(--brand-primary-dark)}
+.btn_v2_sec{color:var(--ink);background:transparent;border:1px solid var(--line-strong);border-radius:var(--radius-pill)}
+.btn_v2_sec:hover{border-color:var(--brand-primary);color:var(--brand-primary)}
+.btn_v2_accent{color:var(--ink);background:white;border:1px solid var(--brand-accent);border-radius:var(--radius-pill)}
+.btn_v2_accent:hover{background:var(--brand-accent-light);border-color:var(--brand-accent-light)}
 .hrimg{animation:upDown 5s linear infinite}
 
 nav{z-index:5;backdrop-filter: blur(3px);}
 .bl_un{color:var(--blue);position:relative;z-index:1}
 .bl_un::after{content:'';position:absolute;bottom:-12px;left:5%;height:40px;width:100%;z-index:-1;background:url('/icons/underline.svg');background-size: contain;background-repeat: no-repeat;background-position: right}
+.underline-accent{color:var(--brand-accent);position:relative;z-index:1}
+.underline-accent::after{content:'';position:absolute;bottom:-12px;left:5%;height:40px;width:100%;z-index:-1;background:url('/icons/underline.svg');background-size: contain;background-repeat: no-repeat;background-position: right;filter:sepia(1) saturate(3) hue-rotate(-10deg)}
 .stack_div:nth-of-type(2), .stack_div:nth-of-type(4){background:var(--blue);color:var(--white)}
 .stack_div:nth-of-type(1), .stack_div:nth-of-type(3){background:var(--blue_faded1);color:var(--blue)}
 .stack_div:nth-of-type(1){top:16vh}
@@ -148,6 +204,13 @@ body.noscroll{height:100vh;overflow: hidden;}
   50%{transform: translateY(2px);}
   100%{transform: translateY(-2px);}
 }
+
+@keyframes marquee {
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+.marquee_track{animation:marquee 32s linear infinite;width:max-content}
+.marquee:hover .marquee_track{animation-play-state:paused}
 
 @media (max-width:640px){
   .stack_div, .wcp_div{grid-template-columns: 1fr}

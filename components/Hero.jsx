@@ -1,105 +1,95 @@
 'use client'
-import Image from 'next/image'
-import hero from '../public/images/hero.png'
-import bookings from '../public/images/bookings.png'
 import Button from './Button'
-import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { useSignUpForm } from '@/hooks/useForm'
+import { useBookCallForm } from '@/hooks/useForm'
+import AnimatedCalendar from './AnimatedCalendar'
+import BrowserFrame from './BrowserFrame'
+import { RefreshCw } from 'lucide-react'
 
-// Animation variants
 const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
 }
 
-const slideInLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
-}
-
 const scaleIn = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut', type: 'spring', stiffness: 100 } }
+  hidden: { opacity: 0, scale: 0.96 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: 'easeOut' } }
 }
 
-const bounceIn = {
-  hidden: { opacity: 0, scale: 0.7 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.7, type: 'spring', stiffness: 120, damping: 10 } }
+function scrollToPillars() {
+  document.getElementById('pillars')?.scrollIntoView({ behavior: 'smooth' })
 }
 
 export default function Hero() {
-  const router = useRouter()
-  const {renderSUForm, formComponent} = useSignUpForm()
+  const { renderCBForm, CBFComp } = useBookCallForm()
   return (
     <>
-    {formComponent}
-    <div className="flex-center-jc h-screen w-screen hero relative" id="index_hero">
+    {CBFComp}
+    <section className="relative min-h-screen flex items-center bg-surface-bg overflow-hidden">
+      {/* soft brand wash behind the visual side */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: 'radial-gradient(60% 50% at 75% 30%, rgba(28,75,66,0.08) 0%, transparent 70%)' }}
+      />
+      <div className="w_80_90 grid md:grid-cols-[1.05fr_1fr] gap-12 md:gap-10 items-center pt-28 pb-16 md:pt-24 md:pb-0 relative">
         <motion.div
+          className="flex flex-col items-center md:items-start gap-5 text-center md:text-left"
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
+          <span className="inline-flex items-center gap-2 rounded-pill border border-line bg-surface-card px-3 py-1 text-xs font-medium text-ink-secondary">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-accent" />
+            Property Management System
+          </span>
+          <motion.h1
+            className="font-display font-medium text-ink text-[34px] leading-[1.1] md:text-[44px] lg:text-[56px]"
+            variants={fadeInUp}
+          >
+            One system for every property, from a <span className="italic text-brand-primary">single cottage</span> to a <span className="italic text-brand-primary">full resort</span>.
+          </motion.h1>
+          <motion.p
+            className="text-base md:text-lg text-ink-secondary max-w-xl"
+            variants={fadeInUp}
+          >
+            Proppo brings bookings, OTAs, payments, and guest communication into one place, built for hosts who run everything themselves, and for teams running full-service hotels.
+          </motion.p>
+          <motion.div
+            className="flex flex-col sm:flex-row items-center gap-3 mt-2 w-full sm:w-auto"
+            variants={fadeInUp}
+          >
+            <Button styles="btn_v2_pri text-base px-7 py-3 w-full sm:w-auto" onClick={renderCBForm}>Book a demo</Button>
+            <Button styles="btn_v2_sec text-base px-7 py-3 w-full sm:w-auto" onClick={scrollToPillars}>Explore the product</Button>
+          </motion.div>
+        </motion.div>
+
+        {/* product visual: placeholder framed as a live app window */}
+        <motion.div
+          className="relative"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
           variants={scaleIn}
         >
-          <Image height={1000} width={1000} src={bookings} alt='' className='hero_img' />
+          <BrowserFrame url="pms.proppo.in/calendar">
+            <AnimatedCalendar />
+          </BrowserFrame>
+          <motion.div
+            className="absolute -bottom-5 left-4 md:-left-6 flex items-center gap-3 bg-surface-card border border-line rounded-xl shadow-lg px-4 py-3"
+            variants={fadeInUp}
+          >
+            <span className="h-8 w-8 rounded-lg bg-brand-primary/10 flex items-center justify-center">
+              <RefreshCw size={15} className="text-brand-primary" />
+            </span>
+            <span>
+              <span className="block text-xs font-semibold text-ink">Real-time OTA sync</span>
+              <span className="block text-[10px] text-ink-muted">300+ channels connected</span>
+            </span>
+          </motion.div>
         </motion.div>
-        <div className="h-[120vh] md:h-screen hero_div md:gap-4 grid md:grid-cols-2 mx-auto w-[90%] md:w-[80%] overflow-hidden">
-            <motion.div
-              className="flex items-center justify-center md:items-start flex-col gap-2 pt-[10vh] md:pt-0 px-2 md:px-0"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeInUp}
-            >
-                <motion.div
-                  className="flex items-center justify-center md:justify-start gap-1"
-                  variants={slideInLeft}
-                >
-                  <div className="text-[10px] md:text-sm bg-[#6840ff]/5 dark:text-white dark:bg-white/5 w-fit text-blue text-center rounded-3xl p-1 px-3 italic font-medium">#Proppo</div>
-                  <div className="text-[10px] md:text-sm bg-[#6840ff]/5 dark:text-white dark:bg-white/5 w-fit text-blue text-center rounded-3xl p-1 px-3 italic font-medium">#PropertyManagementSystem</div>
-                </motion.div>
-                <motion.h1
-                  style={{lineHeight:'110%'}}
-                  className='text-center md:text-left text-4xl md:text-4xl lg:text-6xl font-bold'
-                  variants={fadeInUp}
-                >
-                  One Product, <br/>Every Solution, <br/><span>Zero Headaches</span>
-                </motion.h1>
-                <motion.p
-                  className='text-sm text-center md:text-left md:text-xl text-gray-800/80 dark:text-white'
-                  variants={fadeInUp}
-                >
-                  Reservations, OTAs, check-ins, food ordering Proppo handles it all.
-                  {/* <span className='font-medium'>₹50/room/month</span>. */}
-                </motion.p>
-                <motion.p
-                  className='text-xs md:text-sm opacity-70 italic bg-blue-800/5 dark:bg-white/5 p-1 px-2 border-r-2 border-r-[#6840ff] dark:border-r-white'
-                  variants={fadeInUp}
-                >
-                  Nope, no asterisk, no tiny fine print. Promise.
-                </motion.p>
-                <motion.div
-                  className="flex items-center justify-center md:justify-center gap-2 mt-2"
-                  variants={fadeInUp}
-                >
-                  <motion.div variants={bounceIn}>
-                    <Button styles="btn_pri md:text-lg px-5" onClick={renderSUForm}>Sign Up Now</Button>
-                  </motion.div>
-                  {/* <motion.div variants={bounceIn} transition={{ delay: 0.2 }}>
-                    <Button styles="btn_sec md:text-lg px-5" onClick={() => router.push('/pricing')}>See Pricing</Button>
-                  </motion.div> */}
-                </motion.div>
-            </motion.div>
-            <motion.div
-              className="flex-center-jc h-fit md:h-auto"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={scaleIn}
-            >
-              <Image src={hero} height={1200} width={1200} className='h-full w-full object-contain hrimg' alt=''/>
-            </motion.div>
-        </div>
-    </div>
+      </div>
+    </section>
     </>
   )
 }
