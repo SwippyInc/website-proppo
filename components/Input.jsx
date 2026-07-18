@@ -6,13 +6,13 @@ import 'react-phone-number-input/style.css'
 import { cn } from "@/app/functions"
 
 export default function Input(props) {
-    let {label,styles,text,password,readOnly,text_styles,input_styles} = props
+    let {label,styles,text,password,readOnly,text_styles,input_styles,...rest} = props
     let [showPwToggle,setShowPwToggle] = useState(password ? true : false)
     let [mode,setMode] = useState('password')
   return (
     <div className={cn(`relative`,styles)}>
         {label && <label className="text-xs ml-1 block mb-1 capitalize">{label}</label>}
-        <input type={password ? mode : ''} className="bg-blue-800/5 block w-full p-3 rounded-xl transition duration-300 border border-[#ccc] hover:border-[#6840ff]/50 focus:border-[#6840ff] outline-none" {...props} autoComplete="off" title={label} readOnly={readOnly}/>
+        <input type={password ? mode : ''} className="bg-blue-800/5 block w-full p-3 rounded-xl transition duration-300 border border-[#ccc] hover:border-[#6840ff]/50 focus:border-[#6840ff] outline-none" {...rest} autoComplete="off" title={label} readOnly={readOnly}/>
         {text && <p className={cn(`text-xs text-gray-500 dark:text-white mt-1 ml-1`,text_styles)}>{text}</p>}
         {showPwToggle && <>
         <button className="absolute grid items-center h-[40%] bg-white dark:bg-black-black2 top-[60%] right-4 translate-y-[-50%] px-1" type="button" onClick={()=>setMode(s=>s == 'password' ? 'text' : 'password')}>

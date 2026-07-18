@@ -151,7 +151,7 @@ export function GetCBForm({ hideFun }) {
   const router = useRouter()
   const [state, setState] = useState({
     name: '',phone: '',
-    anything_else: '',time:null
+    anything_else: '',time:''
   })
 
   useEffect(()=>{
@@ -179,7 +179,7 @@ export function GetCBForm({ hideFun }) {
     Data.send_mail(obj).then(d=>{
       let {message,status} = d
       if(status == 'success'){
-        setState(s=>({...s,name:'',phone:'',anything_else:'',time:null}))
+        setState(s=>({...s,name:'',phone:'',anything_else:'',time:''}))
         setIsError(false)
         Data.setUser({is_submitted:true})
         router.push(`/thanks?t=DEMO_REQUEST`)
