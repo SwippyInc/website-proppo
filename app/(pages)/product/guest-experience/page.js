@@ -3,7 +3,7 @@ import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
 import FeatureSection from '@/components/FeatureSection'
-import MediaPlaceholder from '@/components/MediaPlaceholder'
+import SceneMedia from '@/components/SceneMedia'
 import { FinalCTABand } from '@/components/Sections'
 
 // Content per proppo-site-spec.md Section 8
@@ -53,14 +53,14 @@ const SECTIONS = [
   },
 ]
 
-// 8.2 visual — the guest-facing Guidebook on a phone. Spec asset rendered as a
-// MediaPlaceholder (spec placeholder convention) until real media lands.
+// 8.2 visual — the guest-facing Guidebook on a phone. SceneMedia renders the
+// animated guidebook scene for this asset path (see components/SceneMedia.jsx).
 function GuidebookPhone() {
   return (
     <div className="rounded-[2.5rem] border border-line bg-surface-card p-3 shadow-2xl max-w-[280px] mx-auto w-full">
       {/* speaker hint so the wrapper reads as a phone */}
       <div className="mx-auto mb-3 h-1.5 w-16 rounded-full bg-line" />
-      <MediaPlaceholder
+      <SceneMedia
         label="Guidebook — guest view (mobile)"
         path="/assets/product/guidebook/guest-view-mobile.png"
         aspect="aspect-[9/16]"

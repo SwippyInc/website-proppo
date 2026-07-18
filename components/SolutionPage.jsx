@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
-import MediaPlaceholder from '@/components/MediaPlaceholder'
+import SceneMedia from '@/components/SceneMedia'
 import { FinalCTABand } from '@/components/Sections'
 
 const fadeInUp = {
@@ -57,7 +57,7 @@ export default function SolutionPage({ tone = 'formal', crumb, title, sub, body,
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
           >
-            <MediaPlaceholder label={crumb?.current} path={asset} aspect="aspect-[21/9]" />
+            <SceneMedia label={crumb?.current} path={asset} aspect="aspect-[21/9]" />
           </motion.div>
         </div>
       </section>
@@ -120,7 +120,7 @@ export default function SolutionPage({ tone = 'formal', crumb, title, sub, body,
                   viewport={{ once: true, amount: 0.3 }}
                   variants={fadeInUp}
                 >
-                  <MediaPlaceholder label={extraAsset.label} path={extraAsset.path} aspect="aspect-[4/3]" />
+                  <SceneMedia label={extraAsset.label} path={extraAsset.path} aspect="aspect-[4/3]" />
                 </motion.div>
               )}
             </div>

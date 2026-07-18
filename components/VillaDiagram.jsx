@@ -90,9 +90,6 @@ export default function VillaDiagram() {
         >
           {booked ? <><RotateCcw size={14} /> Reset the example</> : 'Simulate a booking on Room 1'}
         </button>
-        <p className="text-[10px] font-mono text-ink-muted/70 mt-3 text-center">
-          media pending: /assets/product/virtual-inventory/combination-diagram.mp4
-        </p>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@
 import Button from './Button'
 import { motion } from 'framer-motion'
 import { useBookCallForm } from '@/hooks/useForm'
-import MediaPlaceholder from './MediaPlaceholder'
+import AnimatedCalendar from './AnimatedCalendar'
 import BrowserFrame from './BrowserFrame'
 import { RefreshCw } from 'lucide-react'
 
@@ -73,7 +73,7 @@ export default function Hero() {
           variants={scaleIn}
         >
           <BrowserFrame url="pms.proppo.in/calendar">
-            <MediaPlaceholder label="Looping demo — booking calendar in use" path="/assets/home/hero-dashboard.mp4" aspect="aspect-[4/3]" className="rounded-lg" />
+            <AnimatedCalendar />
           </BrowserFrame>
           <motion.div
             className="absolute -bottom-5 left-4 md:-left-6 flex items-center gap-3 bg-surface-card border border-line rounded-xl shadow-lg px-4 py-3"
@@ -84,7 +84,7 @@ export default function Hero() {
             </span>
             <span>
               <span className="block text-xs font-semibold text-ink">Real-time OTA sync</span>
-              <span className="block text-[10px] text-ink-muted">300+ channels via Su</span>
+              <span className="block text-[10px] text-ink-muted">300+ channels connected</span>
             </span>
           </motion.div>
         </motion.div>

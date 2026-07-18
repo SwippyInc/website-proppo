@@ -4,7 +4,9 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { Radio, Globe, LayoutGrid, MessageCircle, ArrowRight, CalendarDays, RefreshCw, ChefHat, BedDouble, ConciergeBell, Briefcase } from 'lucide-react'
 import Button from "./Button"
-import MediaPlaceholder, { VerifyTag } from "./MediaPlaceholder"
+import { VerifyTag } from "./MediaPlaceholder"
+import { SOLUTION_SCENES, CaseStudyScene } from "./SolutionScenes"
+import { AlertsPhoneScene } from "./ProductScenes"
 import Marquee from "./Marquee"
 import { useBookCallForm } from "@/hooks/useForm"
 import { SOLUTIONS, OTAS } from "@/constants"
@@ -168,7 +170,9 @@ export function SolutionsTeaser() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {SOLUTIONS.map((solution, i) => (
+          {SOLUTIONS.map((solution, i) => {
+            const Scene = SOLUTION_SCENES[solution.name]
+            return (
             <motion.div
               key={solution.name}
               variants={scaleIn}
@@ -176,7 +180,7 @@ export function SolutionsTeaser() {
             >
               <Link href={solution.href} className="group block">
                 <div className="mb-4 transition-transform duration-300 group-hover:-translate-y-1">
-                  <MediaPlaceholder label={solution.name} path={solution.asset} aspect="aspect-[4/3]" />
+                  <Scene />
                 </div>
                 <p className="font-display text-xl font-medium text-ink flex items-center gap-1.5">
                   {solution.name}
@@ -185,7 +189,8 @@ export function SolutionsTeaser() {
                 <p className="text-sm text-ink-secondary mt-1">{solution.desc}</p>
               </Link>
             </motion.div>
-          ))}
+            )
+          })}
         </motion.div>
       </div>
     </section>
@@ -212,7 +217,7 @@ export function SocialProof() {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
         >
-          <MediaPlaceholder label="Cedar Cottages, Mashobra" path="/assets/home/case-study-cedar-cottages.jpg" aspect="aspect-[4/3]" />
+          <CaseStudyScene />
           <div>
             <p className="font-display italic text-xl md:text-2xl leading-relaxed">
               &ldquo;Proppo brought every OTA and our direct bookings into one calendar — no more double-checking three tabs before we confirm a room.&rdquo;
@@ -344,6 +349,9 @@ export function WhyChooseProppo() {
           </h2>
           <p className="text-base md:text-lg text-ink-secondary italic mb-6">Because smooth operations mean happier guests.</p>
           <Button styles="btn_v2_pri px-6 py-3" onClick={renderCBForm}>Book a demo</Button>
+          <div className="mt-8 max-w-[240px]">
+            <AlertsPhoneScene />
+          </div>
         </motion.div>
         <motion.div
           className="border-b border-line"

@@ -53,7 +53,7 @@ const SECTIONS = [
       'Rate sync',
       'Restriction sync — Stop Sell, Min/Max Stay, Closed to Arrival/Departure',
       'Booking sync',
-      '300+ OTA connectivity via Su',
+      '300+ OTA connectivity',
     ],
     assets: [{ label: 'Real-time sync across connected OTAs', path: '/assets/product/channel-manager/sync-diagram.mp4' }],
   },

@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
-import MediaPlaceholder, { VerifyTag } from '@/components/MediaPlaceholder'
+import { VerifyTag } from '@/components/MediaPlaceholder'
+import SceneMedia from '@/components/SceneMedia'
 import { FinalCTABand } from '@/components/Sections'
 
 const fadeInUp = {
@@ -31,7 +32,7 @@ export default function CaseStudies() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
           >
-            <MediaPlaceholder
+            <SceneMedia
               label="Cedar Cottages, Mashobra"
               path="/assets/home/case-study-cedar-cottages.jpg"
               aspect="aspect-[4/3]"

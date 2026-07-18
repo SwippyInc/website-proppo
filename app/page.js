@@ -1,6 +1,7 @@
 'use client'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
+import LiveExamples from '@/components/LiveExamples'
 import NavBar from '@/components/NavBar'
 import { FinalCTABand, FourPillars, ProblemFraming, SocialProof, SolutionsTeaser, TrustBar, WhatDoesProppoDo, WhyChooseProppo } from '@/components/Sections'
 import { useTheme } from 'next-themes'
@@ -20,6 +21,7 @@ export default function page() {
       <FourPillars/>
       <WhatDoesProppoDo/>
       <SolutionsTeaser/>
+      <LiveExamples/>
       <WhyChooseProppo/>
       <SocialProof/>
       <FinalCTABand/>

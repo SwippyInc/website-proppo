@@ -5,6 +5,7 @@ import { ChevronRight } from 'lucide-react'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import FeatureSection from '@/components/FeatureSection'
+import { MobileFrontDeskScene, AvailabilityScene } from '@/components/ProductScenes'
 import { FinalCTABand } from '@/components/Sections'
 
 const fadeInUp = {
@@ -46,6 +47,7 @@ const SECTIONS = [
       'Guest registration & documents',
       'Folios & Invoices',
     ],
+    visual: 'frontdesk',
     flip: true,
   },
   {
@@ -60,6 +62,7 @@ const SECTIONS = [
       'Maintenance blocks',
       'Hold inventory',
     ],
+    visual: 'availability',
     alt: true,
   },
 ]
@@ -90,7 +93,9 @@ export default function PropertyManagement() {
         </motion.div>
       </div>
       {SECTIONS.map((section) => (
-        <FeatureSection key={section.id} {...section} />
+        <FeatureSection key={section.id} {...section}>
+          {section.visual === 'frontdesk' ? <MobileFrontDeskScene /> : section.visual === 'availability' ? <AvailabilityScene /> : undefined}
+        </FeatureSection>
       ))}
       <FinalCTABand />
       <Footer />

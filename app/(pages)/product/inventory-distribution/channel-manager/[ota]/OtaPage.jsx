@@ -6,7 +6,8 @@ import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
 import FeatureSection from '@/components/FeatureSection'
 import BrowserFrame from '@/components/BrowserFrame'
-import MediaPlaceholder, { VerifyTag } from '@/components/MediaPlaceholder'
+import { VerifyTag } from '@/components/MediaPlaceholder'
+import SceneMedia from '@/components/SceneMedia'
 import { FinalCTABand } from '@/components/Sections'
 import { OTAS } from '@/constants'
 
@@ -44,17 +45,7 @@ export default function OtaPage({ ota }) {
         features={features}
       >
         <BrowserFrame url={`pms.proppo.in/channels/${ota.slug}`}>
-          <MediaPlaceholder label={`${ota.name} logo`} path={`/assets/product/ota/${ota.slug}/logo.svg`} />
-          <div className="flex items-center justify-between gap-3 px-3 py-2.5 mt-2 rounded-xl border border-line bg-surface-bg-alt">
-            <span className="flex items-center gap-2 text-xs font-medium text-ink shrink-0">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-semantic-success opacity-60" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-semantic-success" />
-              </span>
-              Connected
-            </span>
-            <span className="text-[10px] font-mono text-ink-muted truncate">inventory · rates · restrictions · bookings</span>
-          </div>
+          <SceneMedia label={`${ota.name} logo`} path={`/assets/product/ota/${ota.slug}/logo.svg`} />
         </BrowserFrame>
       </FeatureSection>
 

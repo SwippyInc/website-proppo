@@ -20,7 +20,7 @@ const ROLES = ['Owner', 'Admin', 'Reception', 'Front Desk', 'Finance', 'Housekee
 
 // 10.8 — the five integrations, rendered as chips; Airpay gets the coming-soon treatment
 const INTEGRATIONS = [
-  { name: 'Channel Manager (Su)' },
+  { name: 'Channel Manager' },
   { name: 'Razorpay' },
   { name: 'Airpay (coming soon)', soon: true },
   { name: 'WhatsApp Business API' },

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Check, Star } from 'lucide-react'
-import MediaPlaceholder from './MediaPlaceholder'
+import SceneMedia from './SceneMedia'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -11,7 +11,7 @@ const fadeInUp = {
 
 // Reusable v2 product-category feature block (proppo-site-spec.md Sections 5-10).
 // features: array of strings or { lead, rest } (lead is bolded)
-// assets: array of { label, path } — rendered as MediaPlaceholder blocks per the spec's placeholder convention
+// assets: array of { label, path } — rendered via SceneMedia (animated scene when the path has one, MediaPlaceholder otherwise)
 // children: optional custom visual (diagram, mock) that replaces the assets column
 export default function FeatureSection({ id, eyebrow, differentiator = false, headline, subheadline, body, features = [], assets = [], flip = false, alt = false, children }) {
   const hasMedia = Boolean(children) || assets.length > 0
@@ -60,7 +60,7 @@ export default function FeatureSection({ id, eyebrow, differentiator = false, he
             variants={fadeInUp}
           >
             {children ?? assets.map((asset) => (
-              <MediaPlaceholder key={asset.path} label={asset.label} path={asset.path} />
+              <SceneMedia key={asset.path} label={asset.label} path={asset.path} />
             ))}
           </motion.div>
         )}
