@@ -1,0 +1,38 @@
+# Proppo
+
+> Proppo is an all-in-one property management software for hospitality businesses. It helps hotels, hostels, homestays, and vacation rentals manage their operations from a single platform.
+
+## What Proppo Does
+
+Proppo is a SaaS platform that provides:
+- **Channel Manager**: Sync rates and availability across OTAs (Booking.com, Airbnb, Expedia, etc.) to prevent overbookings
+- **Property Management System (PMS)**: Manage reservations, front desk operations, and guest data
+- **Booking Engine**: Accept direct bookings on your own website
+- **Revenue Management**: Monitor competitor pricing and optimize your rates
+- **Inventory Management**: Update room inventory from a single dashboard
+
+## Target Customers
+
+- Hotels and boutique hotels
+- Hostels and backpacker accommodations
+- Homestays and bed & breakfasts
+- Vacation rentals and serviced apartments
+- Property managers handling multiple listings
+
+## Key Pages
+
+- Homepage: https://proppo.in
+- Pricing: https://proppo.in/pricing
+- All-in-One features: https://proppo.in/all-in-one
+- Proppo SaaS overview: https://proppo.in/proppo-saas
+
+## Legal
+
+- Privacy Policy: https://proppo.in/privacy-policy
+- Terms of Service: https://proppo.in/termsandconditions
+- Cancellation & Refund Policy: https://proppo.in/refundandcancellation
+- Data Deletion: https://proppo.in/data-deletion
+
+## Contact
+
+Website: https://proppo.in
