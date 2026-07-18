@@ -78,7 +78,7 @@ export default function VillaDiagram() {
       <div className="px-5 pb-5">
         <p className="text-xs text-ink-secondary leading-relaxed min-h-[2.5em]">
           {booked
-            ? 'Room 1 booked — "Entire Villa" automatically became "Rooms 2 + 3". Every channel updates. No overlap, no manual edits.'
+            ? 'Room 1 booked. "Entire Villa" automatically became "Rooms 2 + 3". Every channel updates. No overlap, no manual edits.'
             : 'All four listings sell from the same linked inventory. Try booking Room 1:'}
         </p>
         <button

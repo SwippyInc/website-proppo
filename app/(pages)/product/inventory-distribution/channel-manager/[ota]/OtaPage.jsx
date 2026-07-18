@@ -6,7 +6,6 @@ import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
 import FeatureSection from '@/components/FeatureSection'
 import BrowserFrame from '@/components/BrowserFrame'
-import { VerifyTag } from '@/components/MediaPlaceholder'
 import SceneMedia from '@/components/SceneMedia'
 import { FinalCTABand } from '@/components/Sections'
 import { OTAS } from '@/constants'
@@ -22,10 +21,10 @@ const fadeInUp = {
 // grounded in the Section 6.3 channel-manager capabilities.
 export default function OtaPage({ ota }) {
   const features = [
-    { lead: 'Connection method', rest: '— direct connection, set up once from your Proppo dashboard' },
-    { lead: 'Rate/availability sync', rest: `— rates and availability pushed to ${ota.name} in real time` },
-    { lead: 'Restriction sync', rest: '— Stop Sell, Min/Max Stay, and Closed to Arrival/Departure' },
-    { lead: 'Booking import', rest: `— ${ota.name} bookings land in the Proppo calendar automatically` },
+    { lead: 'Connection method', rest: '· direct connection, set up once from your Proppo dashboard' },
+    { lead: 'Rate/availability sync', rest: `· rates and availability pushed to ${ota.name} in real time` },
+    { lead: 'Restriction sync', rest: '· Stop Sell, Min/Max Stay, and Closed to Arrival/Departure' },
+    { lead: 'Booking import', rest: `· ${ota.name} bookings land in the Proppo calendar automatically` },
   ]
   const others = OTAS.filter((o) => o.slug !== ota.slug)
 
@@ -35,7 +34,7 @@ export default function OtaPage({ ota }) {
       <PageHero
         crumb={{ href: '/product/inventory-distribution', label: 'Inventory & Distribution', current: ota.name }}
         title={<>Sync <span className="italic text-brand-primary">{ota.name}</span> with every other channel you sell on</>}
-        sub={<>{ota.line}{ota.verify && <VerifyTag>{ota.verify}</VerifyTag>}</>}
+        sub={ota.line}
       />
 
       <FeatureSection
@@ -61,7 +60,7 @@ export default function OtaPage({ ota }) {
           >
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-accent mb-3">Directly connected OTAs</p>
             <h2 className="font-display text-2xl md:text-4xl font-medium text-ink mb-3">Also connected</h2>
-            <p className="text-sm md:text-base text-ink-secondary">Each connection has its own sync details — pick a channel to see how it works.</p>
+            <p className="text-sm md:text-base text-ink-secondary">Each connection has its own sync details. Pick a channel to see how it works.</p>
           </motion.div>
           <motion.div
             className="flex flex-wrap gap-3"

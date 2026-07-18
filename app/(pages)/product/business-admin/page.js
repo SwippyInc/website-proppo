@@ -5,7 +5,6 @@ import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
 import FeatureSection from '@/components/FeatureSection'
-import { VerifyTag } from '@/components/MediaPlaceholder'
 import { FinalCTABand } from '@/components/Sections'
 
 const fadeInUp = {
@@ -37,8 +36,7 @@ const SECTIONS = [
     headline: 'Month-end, without the spreadsheet archaeology',
     body: (
       <>
-        GST and accounting reporting is built around how Indian properties actually file — a monthly order-level export broken down by HSN/SAC code and slab rate, with a full B2B invoice summary including buyer details, ready to hand to your accountant.
-        <VerifyTag>confirm exact export format (CSV/Excel) and whether it&apos;s downloadable self-serve or generated on request</VerifyTag>
+        GST and accounting reporting is built around how Indian properties actually file, a monthly order-level export broken down by HSN/SAC code and slab rate, with a full B2B invoice summary including buyer details, ready to hand to your accountant.
       </>
     ),
     features: [
@@ -46,7 +44,7 @@ const SECTIONS = [
       'Payment reports',
       'Outstanding payments & collections',
       'Accounting records',
-      { lead: 'GST-ready monthly export', rest: '— HSN/SAC-wise breakdown, B2B invoice summary' },
+      { lead: 'GST-ready monthly export', rest: '· HSN/SAC-wise breakdown, B2B invoice summary' },
       'Cash tracking',
     ],
   },
@@ -70,8 +68,8 @@ const SECTIONS = [
   {
     id: 'user-management',
     eyebrow: 'User Management & Roles',
-    headline: 'Everyone sees exactly what they need — nothing more',
-    body: '10+ roles, each with defined permissions — Owner, Admin, Reception, Front Desk, Finance, Housekeeping, Kitchen, Restaurant Staff, Manager, Accountant, and more.',
+    headline: 'Everyone sees exactly what they need, nothing more',
+    body: '10+ roles, each with defined permissions, Owner, Admin, Reception, Front Desk, Finance, Housekeeping, Kitchen, Restaurant Staff, Manager, Accountant, and more.',
     features: [
       'Role-based access with defined permissions per role',
       'No shared logins',
@@ -82,10 +80,10 @@ const SECTIONS = [
     id: 'multi-property',
     eyebrow: 'Multi-Property & Command Center',
     headline: 'Run one property, or twenty, from the same login',
-    body: 'Switch between properties instantly, or step back and view all of them at once in the Command Center — cumulative performance across your entire portfolio in one screen.',
+    body: 'Switch between properties instantly, or step back and view all of them at once in the Command Center, cumulative performance across your entire portfolio in one screen.',
     features: [
       'Multi-property switching',
-      { lead: 'Command Center', rest: '— cumulative cross-property view' },
+      { lead: 'Command Center', rest: '· cumulative cross-property view' },
       'Separate inventory per property',
       'Separate staff per property',
       'Property-wise reporting',
@@ -98,7 +96,7 @@ const SECTIONS = [
     id: 'payments',
     eyebrow: 'Payments',
     headline: 'Collect payments the way your guests want to pay',
-    body: 'Live via Razorpay — cards, UPI, netbanking, wallets, and EMI, plus support for partial deposits. Airpay integration is coming soon.',
+    body: 'Live via Razorpay, cards, UPI, netbanking, wallets, and EMI, plus support for partial deposits. Airpay integration is coming soon.',
     features: [
       'Full range of Razorpay-supported payment methods',
       'Partial deposit support',
@@ -110,8 +108,8 @@ const SECTIONS = [
   {
     id: 'mobile-apps',
     eyebrow: 'Mobile Apps',
-    headline: 'Your property, in your pocket — full stop',
-    body: 'The Proppo mobile app isn\u2019t a stripped-down companion to the dashboard — it has full feature parity with web, including rate and inventory management.',
+    headline: 'Your property, in your pocket, full stop',
+    body: 'The Proppo mobile app isn\u2019t a stripped-down companion to the dashboard. It has full feature parity with web, including rate and inventory management.',
     features: [
       'Full feature parity with web dashboard',
       'Booking management',
@@ -127,7 +125,7 @@ const SECTIONS = [
     id: 'travel-agents',
     eyebrow: 'Travel Agent Module',
     headline: 'Every agent booking, tracked automatically',
-    body: 'Add travel agents once. Choose them as a booking source, and it\u2019s automatically logged to that agent\u2019s ledger — with automated messages sent on any action related to their booking.',
+    body: 'Add travel agents once. Choose them as a booking source, and it\u2019s automatically logged to that agent\u2019s ledger, with automated messages sent on any action related to their booking.',
     features: [
       'Travel agent directory',
       'Per-agent booking ledger',
@@ -257,7 +255,7 @@ function CommandCenterMock() {
           <p className="text-sm font-semibold">₹19.3L</p>
         </div>
       </div>
-      <p className="px-5 pb-4 text-[10px] font-mono text-ink-muted/70 text-center">illustrative preview — not live data</p>
+      <p className="px-5 pb-4 text-[10px] font-mono text-ink-muted/70 text-center">illustrative preview · not live data</p>
     </div>
   )
 }
@@ -269,14 +267,14 @@ export default function BusinessAdmin() {
       <PageHero
         crumb={{ href: '/product', label: 'Product', current: 'Business & Admin' }}
         title={<>Business <span className="italic text-brand-primary">&amp;</span> Admin</>}
-        sub="Finance, reporting, roles, and multi-property control — built for the people who answer for the numbers."
+        sub="Finance, reporting, roles, and multi-property control, built for the people who answer for the numbers."
       />
 
       {SECTIONS.map((section) =>
         section.extra ? (
           <TextSection key={section.id} {...section}>
             {section.extra === 'roles' && <ChipGrid items={ROLES} />}
-            {section.extra === 'airpay' && <span className={`inline-block mt-6 ${CHIP_SOON}`}>Airpay — coming soon</span>}
+            {section.extra === 'airpay' && <span className={`inline-block mt-6 ${CHIP_SOON}`}>Airpay · coming soon</span>}
             {section.extra === 'badges' && <AppBadges />}
             {section.extra === 'integrations' && <ChipGrid items={INTEGRATIONS} />}
           </TextSection>

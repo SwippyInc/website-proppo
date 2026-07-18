@@ -12,20 +12,20 @@ const SECTIONS = [
     eyebrow: 'Restaurant',
     headline: 'Turn your in-house restaurant into a self-service menu',
     features: [
-      { lead: 'QR Menu', rest: '— digital menu, QR ordering, table & room ordering' },
-      { lead: 'Kitchen Management', rest: '— kitchen dashboard, live orders, KOT printing, order queue, order status' },
-      { lead: 'Billing', rest: '— restaurant billing, room posting, GST invoices, multiple payment modes' },
+      { lead: 'QR Menu', rest: '· digital menu, QR ordering, table & room ordering' },
+      { lead: 'Kitchen Management', rest: '· kitchen dashboard, live orders, KOT printing, order queue, order status' },
+      { lead: 'Billing', rest: '· restaurant billing, room posting, GST invoices, multiple payment modes' },
     ],
     assets: [
       { label: 'QR menu ordering demo', path: '/assets/product/restaurant/qr-menu-demo.mp4' },
-      { label: 'Kitchen dashboard — live orders & KOT queue', path: '/assets/product/restaurant/kitchen-dashboard.png' },
+      { label: 'Kitchen dashboard · live orders & KOT queue', path: '/assets/product/restaurant/kitchen-dashboard.png' },
     ],
   },
   {
     id: 'housekeeping',
     eyebrow: 'Housekeeping',
     headline: 'Know the state of every room, without a single walkie-talkie call',
-    body: 'Housekeeping staff get their own login and view — built for their workflow, not a stripped-down version of the front desk screen.',
+    body: 'Housekeeping staff get their own login and view, built for their workflow, not a stripped-down version of the front desk screen.',
     features: [
       'Room status (dirty/clean/in progress)',
       'Staff assignment',
@@ -41,7 +41,7 @@ const SECTIONS = [
     id: 'vendors',
     eyebrow: 'Vendors & Procurement',
     headline: 'Know what your F&B actually costs, down to the ingredient',
-    body: 'Beyond tracking purchases, Proppo ties vendor and stock data to recipe costing — so you know true food cost, not just what you spent.',
+    body: 'Beyond tracking purchases, Proppo ties vendor and stock data to recipe costing, so you know true food cost, not just what you spent.',
     features: [
       'Vendor management',
       'Purchase entries by category',
@@ -60,7 +60,7 @@ export default function Operations() {
       <PageHero
         crumb={{ href: '/product', label: 'Product', current: 'Operations' }}
         title={<span className="italic text-brand-primary">Operations</span>}
-        sub="Restaurant, housekeeping, and vendors — the back of house, finally in the same system as the front."
+        sub="Restaurant, housekeeping, and vendors, the back of house, finally in the same system as the front."
       />
 
       {SECTIONS.map((section) => (

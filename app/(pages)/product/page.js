@@ -27,7 +27,7 @@ export default function Product() {
               <span className="underline-accent">Product</span>
             </h1>
             <p className="w-fit mx-auto my-4 max-w-[90vw] md:max-w-2xl text-sm md:text-base text-ink-secondary text-center">
-              Proppo isn&apos;t a checklist of modules — it&apos;s the set of tools that run a property day to day. Explore by what you&apos;re trying to get done, not by feature name.
+              Proppo isn&apos;t a checklist of modules. It&apos;s the set of tools that run a property day to day. Explore by what you&apos;re trying to get done, not by feature name.
             </p>
           </motion.div>
 

@@ -53,7 +53,7 @@ export default function Hero() {
             className="text-base md:text-lg text-ink-secondary max-w-xl"
             variants={fadeInUp}
           >
-            Proppo brings bookings, OTAs, payments, and guest communication into one place — built for hosts who run everything themselves, and for teams running full-service hotels.
+            Proppo brings bookings, OTAs, payments, and guest communication into one place, built for hosts who run everything themselves, and for teams running full-service hotels.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row items-center gap-3 mt-2 w-full sm:w-auto"

@@ -74,7 +74,7 @@ export default function AnimatedCalendar() {
 
   return (
     <div className="aspect-[4/3] w-full rounded-lg overflow-hidden bg-white border border-line/60">
-      <svg viewBox="0 0 640 480" className="block w-full h-full" fontFamily="inherit" role="img" aria-label="Proppo booking calendar — a new direct booking arrives and syncs to OTAs">
+      <svg viewBox="0 0 640 480" className="block w-full h-full" fontFamily="inherit" role="img" aria-label="Proppo booking calendar. A new direct booking arrives and syncs to OTAs">
         {/* ── top app bar ── */}
         <text x={24} y={40} fontSize={15} fontWeight={600} fill={INK}>Bookings</text>
         <text x={24} y={58} fontSize={10.5} fill={INK_SECONDARY}>October 13 – 19 · All channels</text>
@@ -188,7 +188,7 @@ export default function AnimatedCalendar() {
 
         {/* legend */}
         {Object.values(CHANNELS).map((ch, i) => (
-          <g key={ch.name} transform={`translate(${[180, 262, 384, 500][i]} 0)`}>
+          <g key={ch.name} transform={`translate(${[210, 292, 414, 530][i]} 0)`}>
             <circle cx={0} cy={462} r={3.5} fill={ch.color} />
             <text x={10} y={465.5} fontSize={9.5} fill={INK_MUTED}>{ch.name}</text>
           </g>

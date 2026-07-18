@@ -8,7 +8,6 @@ import PageHero from '@/components/PageHero'
 import FeatureSection from '@/components/FeatureSection'
 import VillaDiagram from '@/components/VillaDiagram'
 import Marquee from '@/components/Marquee'
-import { VerifyTag } from '@/components/MediaPlaceholder'
 import { FinalCTABand } from '@/components/Sections'
 import { OTAS } from '@/constants'
 
@@ -22,16 +21,16 @@ const SECTIONS = [
   {
     id: 'rooms-inventory',
     eyebrow: 'Rooms & Physical Inventory',
-    headline: 'Room types, beds, amenities — set up once, used everywhere',
+    headline: 'Room types, beds, amenities, set up once, used everywhere',
     features: ['Room types', 'Individual rooms', 'Bed configuration', 'Amenities', 'Capacity'],
   },
   {
     id: 'virtual-inventory',
     eyebrow: 'Virtual Inventory',
     differentiator: true,
-    headline: 'Sell the whole villa, and every room inside it — without ever double-selling a bed',
+    headline: 'Sell the whole villa, and every room inside it, without ever double-selling a bed',
     subheadline: 'One of Proppo\u2019s core differentiators: list entire properties and individual rooms as linked inventory.',
-    body: 'Guests don\u2019t all book the same way. Some want a whole villa; others just need one room. Proppo lets you list both — entire villas, individual rooms, and combined configurations — from linked inventory that automatically prevents double bookings between them.',
+    body: 'Guests don\u2019t all book the same way. Some want a whole villa; others just need one room. Proppo lets you list both, entire villas, individual rooms, and combined configurations, from linked inventory that automatically prevents double bookings between them.',
     features: [
       'Entire villa listings',
       'Individual room listings',
@@ -51,7 +50,7 @@ const SECTIONS = [
     features: [
       'Real-time inventory sync',
       'Rate sync',
-      'Restriction sync — Stop Sell, Min/Max Stay, Closed to Arrival/Departure',
+      'Restriction sync · Stop Sell, Min/Max Stay, Closed to Arrival/Departure',
       'Booking sync',
       '300+ OTA connectivity',
     ],
@@ -66,7 +65,7 @@ export default function InventoryDistribution() {
       <PageHero
         crumb={{ href: '/product', label: 'Product', current: 'Inventory & Distribution' }}
         title={<>Inventory &amp; <span className="italic text-brand-primary">Distribution</span></>}
-        sub="Rooms, virtual inventory, and the channel manager — what you sell, and everywhere it gets sold."
+        sub="Rooms, virtual inventory, and the channel manager, what you sell, and everywhere it gets sold."
       />
 
       {SECTIONS.map((section) => (
@@ -87,7 +86,7 @@ export default function InventoryDistribution() {
           >
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-accent mb-3">Directly connected OTAs</p>
             <h2 className="font-display text-2xl md:text-4xl font-medium text-ink mb-3">Every channel you sell on, in sync</h2>
-            <p className="text-sm md:text-base text-ink-secondary">Each connection has its own sync details — pick a channel to see how it works.</p>
+            <p className="text-sm md:text-base text-ink-secondary">Each connection has its own sync details. Pick a channel to see how it works.</p>
           </motion.div>
           <Marquee items={OTAS.map((o) => o.name)} className="mb-10 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]" />
           <motion.div
@@ -108,7 +107,6 @@ export default function InventoryDistribution() {
                   <span className="flex-1">
                     <span className="flex items-center gap-1.5 font-semibold text-ink">
                       {ota.name}
-                      {ota.verify && <VerifyTag>{ota.verify}</VerifyTag>}
                       <ArrowRight size={14} className="ml-auto text-brand-primary opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
                     </span>
                     <span className="block text-sm text-ink-secondary mt-1 leading-snug">{ota.line}</span>

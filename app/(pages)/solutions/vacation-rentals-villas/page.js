@@ -9,7 +9,7 @@ export default function VacationRentalsVillas() {
       crumb={{ href: '/', label: 'Home', current: 'Vacation Rentals & Villas' }}
       title={<>Sell it whole. Sell it by the room. <span className="italic text-brand-primary">Never sell it twice.</span></>}
       sub="Virtual inventory built for exactly how villas actually get booked."
-      body="Villa and vacation rental guests don’t all book the same way — some want the whole place, some just need a room. Proppo’s virtual inventory was built around that, so you can list both without ever risking a double booking."
+      body="Villa and vacation rental guests don’t all book the same way. Some want the whole place, some just need a room. Proppo’s virtual inventory was built around that, so you can list both without ever risking a double booking."
       painsTitle="Pain points"
       pains={[
         'Selling a villa whole and by room without overlap',

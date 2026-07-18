@@ -78,7 +78,7 @@ export default function RevenueBooking() {
       <PageHero
         crumb={{ href: '/product', label: 'Product', current: 'Revenue & Booking' }}
         title={<>Revenue <span className="italic text-brand-primary">&amp;</span> Booking</>}
-        sub="Rate plans, the direct booking engine, and the website builder — everything that turns lookers into bookers."
+        sub="Rate plans, the direct booking engine, and the website builder, everything that turns lookers into bookers."
       />
 
       {SECTIONS.map((section) => (

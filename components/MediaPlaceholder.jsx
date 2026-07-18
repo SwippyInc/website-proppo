@@ -20,11 +20,3 @@ export default function MediaPlaceholder({ label, path, aspect = "aspect-video",
     </div>
   )
 }
-
-export function VerifyTag({ children }) {
-  return (
-    <span className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-semantic-warning bg-semantic-warning/10 rounded-pill px-2 py-0.5 align-middle ml-1">
-      [VERIFY]{children ? `: ${children}` : ""}
-    </span>
-  )
-}

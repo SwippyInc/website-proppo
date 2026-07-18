@@ -45,7 +45,7 @@ function DragDropScene({ aspect = 'aspect-video' }) {
   const bar = { x: GX + 104 + 5, y: GY + RH + 13, w: 3 * CW - 10, h: 30 }
 
   return (
-    <div className={`${frame} ${aspect}`} role="img" aria-label="Drag-and-drop — a booking is moved from room 102 to room 201">
+    <div className={`${frame} ${aspect}`} role="img" aria-label="Drag-and-drop. A booking is moved from room 102 to room 201">
       <svg viewBox="0 0 640 360" className="block w-full h-full" fontFamily="inherit">
         <text x={24} y={38} fontSize={14} fontWeight={600} fill={INK}>Reservations</text>
         <text x={24} y={55} fontSize={10} fill={INK_MUTED}>Drag a booking to change its room</text>
@@ -119,7 +119,7 @@ function DragDropScene({ aspect = 'aspect-video' }) {
           <rect x={352} y={322} width={264} height={26} rx={13} fill={INK} />
           <circle cx={368} cy={335} r={7} fill={SUCCESS} />
           <path d="M364.5 335 l2.5 2.5 l4.5 -5" fill="none" stroke="#fff" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" />
-          <text x={381} y={338.5} fontSize={10} fill="#fff" fontWeight={500}>Moved to Suite 201 — updated everywhere</text>
+          <text x={381} y={338.5} fontSize={10} fill="#fff" fontWeight={500}>Moved to Suite 201 · updated everywhere</text>
         </motion.g>
       </svg>
     </div>
@@ -146,7 +146,7 @@ function SyncScene({ aspect = 'aspect-video' }) {
   const C = { x: 320, y: 172 } // hub center
 
   return (
-    <div className={`${frame} ${aspect}`} role="img" aria-label="Channel manager — a rate change syncs from Proppo to every connected OTA">
+    <div className={`${frame} ${aspect}`} role="img" aria-label="Channel manager. A rate change syncs from Proppo to every connected OTA">
       <svg viewBox="0 0 640 360" className="block w-full h-full" fontFamily="inherit">
         {/* connectors with a constant gentle flow */}
         {SYNC_NODES.map((n, i) => {
@@ -249,7 +249,7 @@ function OtaConnectScene({ slug, aspect = 'aspect-video' }) {
   const hasLogo = slug !== 'travelguru'
 
   return (
-    <div className={`${frame} ${aspect}`} role="img" aria-label={`${name} connected to Proppo — rates, availability and bookings syncing`}>
+    <div className={`${frame} ${aspect}`} role="img" aria-label={`${name} connected to Proppo, rates, availability and bookings syncing`}>
       <svg viewBox="0 0 640 360" className="block w-full h-full" fontFamily="inherit">
         <rect x={24} y={28} width={592} height={304} rx={14} fill="#fff" stroke={LINE} />
 
@@ -314,7 +314,7 @@ function GuidebookScene({ aspect = 'aspect-[9/16]' }) {
   const tr = (times) => ({ duration: 6, repeat, repeatDelay: 1.2, times, ease: 'easeInOut' })
 
   return (
-    <div className={`${frame} ${aspect}`} role="img" aria-label="Guest guidebook on mobile — WiFi details, house manual, nearby places, dining">
+    <div className={`${frame} ${aspect}`} role="img" aria-label="Guest guidebook on mobile, WiFi details, house manual, nearby places, dining">
       <svg viewBox="0 0 360 640" className="block w-full h-full" fontFamily="inherit">
         <rect width={360} height={640} fill="#F1F2FF" />
 
@@ -375,7 +375,7 @@ function GuidebookScene({ aspect = 'aspect-[9/16]' }) {
         {/* help banner */}
         <rect x={20} y={486} width={320} height={54} rx={14} fill={BRAND} opacity={0.08} />
         <text x={38} y={509} fontSize={11.5} fontWeight={600} fill={BRAND}>Need anything?</text>
-        <text x={38} y={525} fontSize={9.5} fill={INK_SECONDARY}>Message your host — replies in minutes</text>
+        <text x={38} y={525} fontSize={9.5} fill={INK_SECONDARY}>Message your host · replies in minutes</text>
 
         {/* bottom tab bar */}
         <rect x={0} y={576} width={360} height={64} fill="#fff" />
@@ -406,7 +406,7 @@ function QrMenuScene({ aspect = 'aspect-video' }) {
   const addBtn = { x: 296, y: 182 } // + button on Paneer Tikka row
 
   return (
-    <div className={`${frame} ${aspect}`} role="img" aria-label="QR menu — a guest adds a dish and sends the order to the kitchen">
+    <div className={`${frame} ${aspect}`} role="img" aria-label="QR menu. A guest adds a dish and sends the order to the kitchen">
       <svg viewBox="0 0 640 360" className="block w-full h-full" fontFamily="inherit">
         {/* menu card */}
         <rect x={24} y={24} width={300} height={312} rx={14} fill="#fff" stroke={LINE} />
@@ -525,7 +525,7 @@ function KitchenBoardScene({ aspect = 'aspect-video' }) {
   )
 
   return (
-    <div className={`${frame} ${aspect}`} role="img" aria-label="Kitchen dashboard — a KOT ticket moves from new to preparing to ready">
+    <div className={`${frame} ${aspect}`} role="img" aria-label="Kitchen dashboard. A KOT ticket moves from new to preparing to ready">
       <svg viewBox="0 0 640 360" className="block w-full h-full" fontFamily="inherit">
         <text x={24} y={38} fontSize={14} fontWeight={600} fill={INK}>Kitchen · live KOT queue</text>
         {/* bell with a ring when the ticket lands */}
@@ -595,7 +595,7 @@ function KitchenBoardScene({ aspect = 'aspect-video' }) {
           animate={{ opacity: [0, 0, 1, 1, 0] }}
           transition={tr([0, 0.72, 0.78, 0.9, 0.97])}
         >
-          KOT #142 ready — room 204 notified
+          KOT #142 ready · room 204 notified
         </motion.text>
       </svg>
     </div>
@@ -623,7 +623,7 @@ function MultiDeptScene({ aspect = 'aspect-[4/3]' }) {
   )
 
   return (
-    <div className={`${frame} ${aspect}`} role="img" aria-label="Multi-department dashboard — front office, housekeeping, restaurant and finance in one view">
+    <div className={`${frame} ${aspect}`} role="img" aria-label="Multi-department dashboard, front office, housekeeping, restaurant and finance in one view">
       <svg viewBox="0 0 640 480" className="block w-full h-full" fontFamily="inherit">
         <text x={28} y={44} fontSize={15} fontWeight={600} fill={INK}>Cedar Resort</text>
         <text x={28} y={62} fontSize={10.5} fill={INK_MUTED}>All departments · one login</text>
@@ -690,7 +690,7 @@ function MultiDeptScene({ aspect = 'aspect-[4/3]' }) {
         </Card>
 
         {/* footer line */}
-        <text x={320} y={452} fontSize={10} fill={INK_MUTED} textAnchor="middle">Every department updates the others — nothing typed twice.</text>
+        <text x={320} y={452} fontSize={10} fill={INK_MUTED} textAnchor="middle">Every department updates the others. Nothing typed twice.</text>
       </svg>
     </div>
   )
@@ -715,7 +715,7 @@ function BookingEngineScene() {
   const cell = 'h-6 rounded-md text-[9px] flex items-center justify-center'
 
   return (
-    <div className="rounded-xl bg-surface-bg p-4 md:p-5 min-h-[318px]" role="img" aria-label="Direct booking engine — dates, live rooms, instant confirmation, zero commission">
+    <div className="rounded-xl bg-surface-bg p-4 md:p-5 min-h-[318px]" role="img" aria-label="Direct booking engine, dates, live rooms, instant confirmation, zero commission">
       <AnimatePresence mode="wait">
         {phase === BE_PHASES.WIDGET && (
           <motion.div key="w" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.35 }}>
@@ -798,7 +798,7 @@ function BookingEngineScene() {
                 </div>
               </motion.div>
             ))}
-            <p className="text-center text-[9.5px] text-semantic-success font-medium">Best rate here — OTAs charge more after commission</p>
+            <p className="text-center text-[9.5px] text-semantic-success font-medium">Best rate here. OTAs charge more after commission</p>
           </motion.div>
         )}
 
@@ -838,7 +838,7 @@ function WebsiteBuilderScene() {
   })
 
   return (
-    <div className={`${frame} aspect-video`} role="img" aria-label="Website builder — a property website assembles itself from blocks">
+    <div className={`${frame} aspect-video`} role="img" aria-label="Website builder. A property website assembles itself from blocks">
       <svg viewBox="0 0 640 360" className="block w-full h-full" fontFamily="inherit">
         {/* template rail */}
         <rect x={0} y={0} width={120} height={360} fill="#F9FAFB" />
@@ -890,7 +890,7 @@ function WebsiteBuilderScene() {
         {/* booking bar */}
         <motion.g {...block(0, 0, 0, 0, 0.5)}>
           <rect x={156} y={298} width={444} height={26} rx={13} fill={BRAND} />
-          <text x={378} y={315} fontSize={10} fill="#fff" fontWeight={600} textAnchor="middle">Check availability — book direct, zero commission</text>
+          <text x={378} y={315} fontSize={10} fill="#fff" fontWeight={600} textAnchor="middle">Check availability · book direct, zero commission</text>
         </motion.g>
 
         {/* responsive proof: phone slides over, same blocks stacked */}
@@ -933,7 +933,7 @@ function RatePlansScene() {
   }))
 
   return (
-    <div className={`${frame} aspect-video`} role="img" aria-label="Rate plans — weekend and occupancy pricing applying automatically">
+    <div className={`${frame} aspect-video`} role="img" aria-label="Rate plans, weekend and occupancy pricing applying automatically">
       <svg viewBox="0 0 640 360" className="block w-full h-full" fontFamily="inherit">
         <text x={24} y={38} fontSize={14} fontWeight={600} fill={INK}>Rates · October</text>
         <text x={24} y={55} fontSize={10} fill={INK_MUTED}>Base ₹4,200 · weekend &amp; occupancy rules on</text>
@@ -1007,7 +1007,7 @@ function MobileFrontDeskScene() {
   ]
 
   return (
-    <div className={`${frame} aspect-video`} role="img" aria-label="Proppo mobile app — checking in a guest from the phone">
+    <div className={`${frame} aspect-video`} role="img" aria-label="Proppo mobile app, checking in a guest from the phone">
       <svg viewBox="0 0 640 360" className="block w-full h-full" fontFamily="inherit">
         <defs>
           <clipPath id="fdPhone"><rect x={56} y={14} width={200} height={332} rx={24} /></clipPath>
@@ -1142,7 +1142,7 @@ function AvailabilityScene() {
   const GX = 120, GY = 88, CW = 66, CH = 34, GAP = 5
 
   return (
-    <div className={`${frame} aspect-video`} role="img" aria-label="Live availability grid — room 203 is blocked for maintenance">
+    <div className={`${frame} aspect-video`} role="img" aria-label="Live availability grid. Room 203 is blocked for maintenance">
       <svg viewBox="0 0 640 360" className="block w-full h-full" fontFamily="inherit">
         <defs>
           <pattern id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
@@ -1232,7 +1232,7 @@ function AlertsPhoneScene() {
   return (
     <div
       className="aspect-[3/4] w-full rounded-[1.8rem] border border-line bg-white shadow-xl overflow-hidden flex flex-col"
-      role="img" aria-label="Proppo mobile app — real-time alerts for bookings, check-ins, kitchen orders and payments"
+      role="img" aria-label="Proppo mobile app, real-time alerts for bookings, check-ins, kitchen orders and payments"
     >
       {/* status + app bar */}
       <div className="flex items-center justify-between px-4 pt-3 pb-2">
@@ -1307,7 +1307,7 @@ function HotelsOpsWide() {
   const tr = (times) => ({ duration: LOOP, repeat, repeatDelay: 1.4, times, ease: 'easeOut' })
 
   return (
-    <div className={`${frame} aspect-[21/9] border-0`} role="img" aria-label="Front desk for a full-service hotel — arrivals, room status and the day at a glance">
+    <div className={`${frame} aspect-[21/9] border-0`} role="img" aria-label="Front desk for a full-service hotel, arrivals, room status and the day at a glance">
       <svg viewBox="0 0 840 360" className="block w-full h-full" fontFamily="inherit">
         <text x={28} y={40} fontSize={15} fontWeight={600} fill={INK}>Front desk</text>
         <text x={28} y={57} fontSize={10.5} fill={INK_SECONDARY}>Friday, 15 November · Cedar Resort</text>
@@ -1441,7 +1441,7 @@ function VillasWide() {
   ]
 
   return (
-    <div className={`${frame} aspect-[21/9] border-0 flex`} role="img" aria-label="Virtual inventory — book a room and every channel relists the villa automatically">
+    <div className={`${frame} aspect-[21/9] border-0 flex`} role="img" aria-label="Virtual inventory. Book a room and every channel relists the villa automatically">
       {/* inventory side */}
       <div className="w-[44%] border-r border-line p-3 flex flex-col">
         <p className="text-[9px] font-semibold uppercase tracking-widest text-ink-muted pb-1">One inventory</p>
@@ -1484,7 +1484,7 @@ function VillasWide() {
             </div>
           ))}
         </div>
-        <p className="text-[9px] text-ink-muted pt-2">Never sold twice — no manual edits, no 2 AM panic.</p>
+        <p className="text-[9px] text-ink-muted pt-2">Never sold twice, no manual edits, no 2 AM panic.</p>
       </div>
     </div>
   )
@@ -1501,19 +1501,19 @@ function HomestaysWide() {
   }, [reduce])
 
   const LOG = [
-    { t: '10:42', c: SUCCESS, text: 'Booking confirmed — WhatsApp sent to guest', d: 1.2 },
+    { t: '10:42', c: SUCCESS, text: 'Booking confirmed · WhatsApp sent to guest', d: 1.2 },
     { t: '10:42', c: BRAND, text: 'Check-in link shared automatically', d: 2.1 },
-    { t: '10:43', c: AMBER, text: 'Reminder scheduled — tomorrow, 1 PM', d: 3.0 },
-    { t: '10:44', c: BLUE, text: 'Guest replied — “See you Saturday!”', d: 3.9 },
+    { t: '10:43', c: AMBER, text: 'Reminder scheduled · tomorrow, 1 PM', d: 3.0 },
+    { t: '10:44', c: BLUE, text: 'Guest replied. “See you Saturday!”', d: 3.9 },
   ]
 
   return (
-    <div className={`${frame} aspect-[21/9] border-0 flex`} role="img" aria-label="Guest messaging on autopilot — every step logged">
+    <div className={`${frame} aspect-[21/9] border-0 flex`} role="img" aria-label="Guest messaging on autopilot, every step logged">
       <div className="w-[42%] border-r border-line">
         <GuestChatScene />
       </div>
       <div className="flex-1 p-3 flex flex-col">
-        <p className="text-[9px] font-semibold uppercase tracking-widest text-ink-muted pb-2">Automation log — typed by no one</p>
+        <p className="text-[9px] font-semibold uppercase tracking-widest text-ink-muted pb-2">Automation log · typed by no one</p>
         <div className="flex-1 flex flex-col justify-center gap-2">
           <AnimatePresence mode="wait">
             <motion.div key={cycle} className="flex flex-col gap-2" exit={{ opacity: 0, transition: { duration: 0.4 } }}>

@@ -23,7 +23,7 @@ const SECTIONS = [
     eyebrow: 'Guidebook',
     headline: 'Everything a guest needs to know, sent as one link',
     subheadline: 'A digital guide, unique to each property, delivered automatically or by your team.',
-    body: 'Every property\u2019s Guidebook is fully configurable — house rules, Wi-Fi, restaurant menu, nearby attractions, emergency contacts, and check-out instructions, all specific to that property. It\u2019s sent to guests via automated WhatsApp (when enabled) or shared manually by staff.',
+    body: 'Every property\u2019s Guidebook is fully configurable, house rules, Wi-Fi, restaurant menu, nearby attractions, emergency contacts, and check-out instructions, all specific to that property. It\u2019s sent to guests via automated WhatsApp (when enabled) or shared manually by staff.',
     features: [
       'Property information',
       'House rules',
@@ -61,7 +61,7 @@ function GuidebookPhone() {
       {/* speaker hint so the wrapper reads as a phone */}
       <div className="mx-auto mb-3 h-1.5 w-16 rounded-full bg-line" />
       <SceneMedia
-        label="Guidebook — guest view (mobile)"
+        label="Guidebook · guest view (mobile)"
         path="/assets/product/guidebook/guest-view-mobile.png"
         aspect="aspect-[9/16]"
       />
@@ -71,7 +71,7 @@ function GuidebookPhone() {
 
 // 8.3 visual — WhatsApp-style mock of the automated guest messages (illustrative labels only).
 const CHAT_MESSAGES = [
-  { text: 'Booking confirmed — Cedar Villa, 12-14 Jun', time: '10:02' },
+  { text: 'Booking confirmed · Cedar Villa, 12-14 Jun', time: '10:02' },
   { text: 'Your check-in link: proppo.in/checkin/\u2026', time: '10:02' },
   { text: 'Check-in reminder: tomorrow, from 1:00 PM', time: '09:30' },
 ]
@@ -96,7 +96,7 @@ export default function GuestExperience() {
       <PageHero
         crumb={{ href: '/product', label: 'Product', current: 'Guest Experience' }}
         title={<>Guest <span className="italic text-brand-primary">Experience</span></>}
-        sub="Web check-in, the guidebook, and guest communication — the stay, before and after arrival."
+        sub="Web check-in, the guidebook, and guest communication, the stay, before and after arrival."
       />
 
       {SECTIONS.map((section) => (

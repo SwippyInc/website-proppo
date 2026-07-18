@@ -22,7 +22,7 @@ export default function Resources() {
       <PageHero
         crumb={{ href: '/', label: 'Home', current: 'Resources' }}
         title="Resources"
-        sub="Guides, stories, and help — whether you're evaluating Proppo or already running on it."
+        sub="Guides, stories, and help, whether you're evaluating Proppo or already running on it."
       />
 
       <section className="py-12 md:py-24 bg-surface-bg">

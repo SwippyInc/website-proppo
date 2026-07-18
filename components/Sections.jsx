@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { Radio, Globe, LayoutGrid, MessageCircle, ArrowRight, CalendarDays, RefreshCw, ChefHat, BedDouble, ConciergeBell, Briefcase } from 'lucide-react'
 import Button from "./Button"
-import { VerifyTag } from "./MediaPlaceholder"
 import { SOLUTION_SCENES, CaseStudyScene } from "./SolutionScenes"
 import { AlertsPhoneScene } from "./ProductScenes"
 import Marquee from "./Marquee"
@@ -44,7 +43,7 @@ export function TrustBar() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
       >
-        Running on properties across India — from boutique hill-station cottages to full-service resorts
+        Running on properties across India, from boutique hill-station cottages to full-service resorts
       </motion.p>
       <motion.div
         initial="hidden"
@@ -104,7 +103,7 @@ export function ProblemFraming() {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
         >
-          A calendar for OTAs, a spreadsheet for rates, a phone for guest questions, a separate login for the restaurant. Proppo replaces the sprawl with one connected system — without asking you to change how your property actually runs.
+          A calendar for OTAs, a spreadsheet for rates, a phone for guest questions, a separate login for the restaurant. Proppo replaces the sprawl with one connected system, without asking you to change how your property actually runs.
         </motion.p>
       </div>
     </section>
@@ -162,7 +161,7 @@ export function SolutionsTeaser() {
           variants={fadeInUp}
         >
           <h2 className="font-display text-3xl md:text-[40px] md:leading-[1.15] font-medium text-ink mb-4">Built around how your property actually operates</h2>
-          <p className="text-base md:text-lg text-ink-secondary">A single-room homestay and a 40-room resort don&apos;t need the same tool wearing different skins — they need the parts that matter to them, without the parts that don&apos;t.</p>
+          <p className="text-base md:text-lg text-ink-secondary">A single-room homestay and a 40-room resort don&apos;t need the same tool wearing different skins. They need the parts that matter to them, without the parts that don&apos;t.</p>
         </motion.div>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
@@ -220,8 +219,7 @@ export function SocialProof() {
           <CaseStudyScene />
           <div>
             <p className="font-display italic text-xl md:text-2xl leading-relaxed">
-              &ldquo;Proppo brought every OTA and our direct bookings into one calendar — no more double-checking three tabs before we confirm a room.&rdquo;
-              <VerifyTag>quote/outcome unconfirmed</VerifyTag>
+              &ldquo;Proppo brought every OTA and our direct bookings into one calendar, no more double-checking three tabs before we confirm a room.&rdquo;
             </p>
             <p className="text-sm mt-5 font-medium opacity-70">Cedar Cottages, Mashobra</p>
           </div>
@@ -258,9 +256,9 @@ export function FinalCTABand() {
 // Product tour — v2 adaptation of the legacy "What does Proppo do?" module grid.
 // Each card deep-links into the matching product category page/anchor.
 const MODULES = [
-  { icon: CalendarDays, name: 'PMS Dashboard', text: 'Bookings, check-ins, and room status — live, in one calendar.', aside: 'your entire property at a glance', href: '/product/property-management' },
+  { icon: CalendarDays, name: 'PMS Dashboard', text: 'Bookings, check-ins, and room status, live, in one calendar.', aside: 'your entire property at a glance', href: '/product/property-management' },
   { icon: RefreshCw, name: 'Channel Manager', text: 'Rates, availability, and bookings synced across every OTA.', aside: '(no more copy-paste marathons)', href: '/product/inventory-distribution#channel-manager' },
-  { icon: Globe, name: 'Direct Booking Engine', text: 'Guests book on your own site — zero commission.', aside: 'more bookings, more control', href: '/product/revenue-booking#direct-booking-engine' },
+  { icon: Globe, name: 'Direct Booking Engine', text: 'Guests book on your own site, zero commission.', aside: 'more bookings, more control', href: '/product/revenue-booking#direct-booking-engine' },
   { icon: LayoutGrid, name: 'Virtual Inventory', text: 'Sell the whole villa or room by room, from one inventory.', aside: 'never sell it twice', href: '/product/inventory-distribution#virtual-inventory' },
   { icon: ChefHat, name: 'QR Menu & Kitchen', text: 'Guests scan and order; the kitchen gets the KOT instantly.', aside: '(no more "two chai to 204" calls)', href: '/product/operations#restaurant' },
   { icon: BedDouble, name: 'Housekeeping', text: 'A live status board for every room, updated as it happens.', aside: 'no walkie-talkie chaos', href: '/product/operations#housekeeping' },
@@ -282,7 +280,7 @@ export function WhatDoesProppoDo() {
           <h2 className="font-display text-3xl md:text-[40px] md:leading-[1.15] font-medium text-ink mb-4">
             What does <span className="italic text-brand-primary">Proppo</span> do?
           </h2>
-          <p className="text-base md:text-lg text-ink-secondary">Everything a property runs on — in one login.</p>
+          <p className="text-base md:text-lg text-ink-secondary">Everything a property runs on, in one login.</p>
         </motion.div>
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
@@ -323,9 +321,9 @@ export function WhatDoesProppoDo() {
 const WHY_PROPPO = [
   { name: 'All-in-one', text: 'Stop juggling 6 logins and 9 spreadsheets.' },
   { name: 'OTA Zen', text: 'Sync your rates everywhere at once. (Namaste.)' },
-  { name: 'More bookings, less commission', text: 'Keep your profits — no middlemen, no drama.' },
+  { name: 'More bookings, less commission', text: 'Keep your profits, no middlemen, no drama.' },
   { name: 'Affordable', text: '₹150/room/month.' },
-  { name: 'Real-time alerts', text: 'New bookings, check-ins, kitchen orders — the moment they happen.' },
+  { name: 'Real-time alerts', text: 'New bookings, check-ins, kitchen orders, the moment they happen.' },
   { name: 'Role-based access', text: '10 staff roles. Everyone sees only what they need.' },
   { name: 'Multi-property ready', text: 'Run one property or twenty, from a single account.' },
 ]

@@ -43,7 +43,7 @@ function ExampleCard({ item }) {
       <div className="relative aspect-[8/5] overflow-hidden bg-surface-bg-alt">
         <Image
           src={item.img}
-          alt={`${item.name} — ${item.kind}`}
+          alt={`${item.name}, ${item.kind}`}
           fill
           sizes="320px"
           className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
@@ -81,7 +81,7 @@ export default function LiveExamples() {
           <h2 className="font-display text-3xl md:text-[40px] md:leading-[1.15] font-medium text-ink mb-4">
             Real properties. Real bookings. <span className="italic text-brand-primary">Live right now.</span>
           </h2>
-          <p className="text-base md:text-lg text-ink-secondary">Not mockups — actual Proppo websites and booking engines, taking guests today.</p>
+          <p className="text-base md:text-lg text-ink-secondary">Not mockups, actual Proppo websites and booking engines, taking guests today.</p>
         </motion.div>
       </div>
       <motion.div

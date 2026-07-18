@@ -8,8 +8,8 @@ export default function HotelsResorts() {
       tone="formal"
       crumb={{ href: '/', label: 'Home', current: 'Hotels & Resorts' }}
       title={<>Full-service operations, <span className="italic text-brand-primary">run from one system</span></>}
-      sub="Room inventory, F&B, housekeeping, finance, and distribution — for properties with departments to coordinate, not just rooms to sell."
-      body="Larger properties bring more moving parts: bigger room counts, in-house restaurants, multi-department staff, and OTA distribution at scale. Proppo covers the full operation — not just the booking calendar — with role-based access so each department works from the view built for them."
+      sub="Room inventory, F&B, housekeeping, finance, and distribution, for properties with departments to coordinate, not just rooms to sell."
+      body="Larger properties bring more moving parts: bigger room counts, in-house restaurants, multi-department staff, and OTA distribution at scale. Proppo covers the full operation, not just the booking calendar, with role-based access so each department works from the view built for them."
       painsTitle="What this segment struggles with"
       pains={[
         'Coordinating housekeeping and room status across a large property',

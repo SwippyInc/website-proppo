@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
-import { VerifyTag } from '@/components/MediaPlaceholder'
 import SceneMedia from '@/components/SceneMedia'
 import { FinalCTABand } from '@/components/Sections'
 
@@ -39,12 +38,9 @@ export default function CaseStudies() {
             />
             <div>
               <p className="font-display italic text-xl leading-relaxed text-ink">
-                &ldquo;Proppo brought every OTA and our direct bookings into one calendar — no more double-checking three tabs before we confirm a room.&rdquo;
+                &ldquo;Proppo brought every OTA and our direct bookings into one calendar, no more double-checking three tabs before we confirm a room.&rdquo;
               </p>
               <p className="text-sm mt-5 font-medium text-ink-secondary">Cedar Cottages, Mashobra</p>
-              <p className="mt-3">
-                <VerifyTag>need confirmed outcomes/metrics, plus 2-3 more customer slots — ideally one resort/hotel and one vacation rental portfolio — with permission to name them</VerifyTag>
-              </p>
             </div>
           </motion.div>
 

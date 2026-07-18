@@ -9,7 +9,7 @@ export default function HomestaysBnbs() {
       crumb={{ href: '/', label: 'Home', current: 'Homestays & BnBs' }}
       title={<>Run it like a pro. <span className="italic text-brand-primary">Still just you.</span></>}
       sub="Everything a small property needs, nothing it doesn’t."
-      body="Most homestays run on one or two people — sometimes just the owner. Proppo is built so you can manage bookings, guest questions, and every OTA listing without needing a front desk team you don’t have."
+      body="Most homestays run on one or two people, sometimes just the owner. Proppo is built so you can manage bookings, guest questions, and every OTA listing without needing a front desk team you don’t have."
       painsTitle="Pain points"
       pains={[
         'Answering the same guest questions on repeat, with no front desk to hand it to',

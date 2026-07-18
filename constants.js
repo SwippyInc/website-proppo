@@ -61,7 +61,7 @@ export const RESOURCES = [
 // OTA pages (proppo-site-spec.md Section 6.4) — slug doubles as the route segment and asset folder name
 export const OTAS = [
     { slug: 'booking-com', name: 'Booking.com', line: 'Typically the highest-volume channel for independent Indian properties.' },
-    { slug: 'airbnb', name: 'Airbnb', line: 'Bookings sync through virtual inventory — whole-property and per-room combinations included.' },
+    { slug: 'airbnb', name: 'Airbnb', line: 'Bookings sync through virtual inventory, whole-property and per-room combinations included.' },
     { slug: 'goibibo', name: 'Goibibo', line: 'Major domestic channel, often paired with MakeMyTrip under GoMMT.' },
     { slug: 'makemytrip', name: 'MakeMyTrip', line: "India's largest domestic OTA by volume for many property types." },
     { slug: 'expedia', name: 'Expedia', line: "International reach across Expedia's group of brands." },
@@ -69,5 +69,5 @@ export const OTAS = [
     { slug: 'yatra', name: 'Yatra', line: 'Established domestic Indian OTA, strong corporate travel ties.' },
     { slug: 'easemytrip', name: 'EaseMyTrip', line: 'Fast-growing domestic Indian OTA.' },
     { slug: 'cleartrip', name: 'Cleartrip', line: 'Domestic Indian OTA, mobile-first booking base.' },
-    { slug: 'travelguru', name: 'Travelguru', line: 'Domestic Indian OTA.', verify: 'confirm current integration status' },
+    { slug: 'travelguru', name: 'Travelguru', line: 'Domestic Indian OTA.' },
 ]

@@ -5,7 +5,6 @@ import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
 import Button from '@/components/Button'
-import { VerifyTag } from '@/components/MediaPlaceholder'
 import { useBookCallForm } from '@/hooks/useForm'
 
 const fadeInUp = {
@@ -36,7 +35,6 @@ export default function Pricing() {
           <p className="font-display text-6xl md:text-7xl font-medium text-ink">
             ₹150<span className="text-2xl md:text-3xl font-normal text-ink-secondary">/room/month</span>
           </p>
-          <VerifyTag>confirm this is still current, and whether it&apos;s the full/only tier or a starting price</VerifyTag>
           <p className="text-ink-secondary mt-4">No commission on direct bookings.</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">

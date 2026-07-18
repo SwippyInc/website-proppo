@@ -41,7 +41,7 @@ function HotelsScene() {
   const chip = { x: 422, y: 182, w: 84, h: 56 }
 
   return (
-    <div className={frame} role="img" aria-label="Proppo front desk — a guest checks in while housekeeping turns a room over">
+    <div className={frame} role="img" aria-label="Proppo front desk. A guest checks in while housekeeping turns a room over">
       <svg viewBox="0 0 640 480" className="block w-full h-full" fontFamily="inherit">
         {/* header */}
         <text x={28} y={42} fontSize={15} fontWeight={600} fill={INK}>Front desk</text>
@@ -256,7 +256,7 @@ function VillasScene() {
   }, [reduce])
 
   return (
-    <div className={`${frame} p-3 flex flex-col`} role="img" aria-label="Virtual inventory — booking one room automatically relists the rest of the villa">
+    <div className={`${frame} p-3 flex flex-col`} role="img" aria-label="Virtual inventory. Booking one room automatically relists the rest of the villa">
       {/* header, mirroring VillaDiagram */}
       <div className="flex items-center justify-between pb-2.5">
         <div className="flex items-center gap-2">
@@ -288,7 +288,7 @@ function VillasScene() {
             className="text-[9.5px] text-ink-secondary leading-snug"
           >
             {booked
-              ? 'Room 1 booked — "Entire Villa" became "Rooms 2 + 3" on every channel. No overlap.'
+              ? 'Room 1 booked. "Entire Villa" became "Rooms 2 + 3" on every channel. No overlap.'
               : 'All four listings sell from one linked inventory. Watch Room 1…'}
           </motion.p>
         </AnimatePresence>
@@ -322,7 +322,7 @@ function GuestChatScene() {
   }, [reduce])
 
   return (
-    <div className={`${frame} flex items-center justify-center bg-surface-bg-alt`} role="img" aria-label="Guest messaging on autopilot — a booking confirmation is sent automatically on WhatsApp">
+    <div className={`${frame} flex items-center justify-center bg-surface-bg-alt`} role="img" aria-label="Guest messaging on autopilot. A booking confirmation is sent automatically on WhatsApp">
       {/* phone */}
       <div className="h-[94%] w-[200px] rounded-[26px] border border-line bg-white shadow-xl overflow-hidden flex flex-col">
         {/* chat header */}
@@ -374,7 +374,7 @@ function GuestChatScene() {
                   transition={{ delay: 2.0, duration: 0.4 }}
                 >
                   <p className="text-[9.5px] leading-snug text-ink">
-                    Hi Meera — your stay at Pine Hollow Cottage is confirmed for 14–16 Nov. Check-in link: proppo.in/c/8k2
+                    Hi Meera. Your stay at Pine Hollow Cottage is confirmed for 14–16 Nov. Check-in link: proppo.in/c/8k2
                   </p>
                   <div className="flex items-center justify-end gap-1 mt-0.5">
                     <span className="text-[7.5px] text-ink-muted">10:42</span>
@@ -399,7 +399,7 @@ function GuestChatScene() {
             {/* guest reply */}
             <motion.div variants={bubbleIn} custom={3.9} className="flex justify-start">
               <div className="max-w-[80%] rounded-xl rounded-tl-sm px-2 py-1.5 bg-white shadow-sm">
-                <p className="text-[9.5px] leading-snug text-ink">Perfect — see you Saturday!</p>
+                <p className="text-[9.5px] leading-snug text-ink">Perfect. See you Saturday!</p>
                 <p className="text-[7.5px] text-ink-muted text-right mt-0.5">10:44</p>
               </div>
             </motion.div>
@@ -444,7 +444,7 @@ function CaseStudyScene() {
       className="aspect-[4/3] w-full rounded-xl overflow-hidden flex flex-col"
       style={{ background: 'linear-gradient(180deg, #1B1730 0%, #241E3E 100%)' }}
       role="img"
-      aria-label="Cedar Cottages, Mashobra at night — 94% occupancy, zero double bookings, three hours saved daily"
+      aria-label="Cedar Cottages, Mashobra at night, 94% occupancy, zero double bookings, three hours saved daily"
     >
       {/* night scene */}
       <svg viewBox="0 0 640 330" className="block w-full flex-1" fontFamily="inherit" preserveAspectRatio="xMidYMid slice">

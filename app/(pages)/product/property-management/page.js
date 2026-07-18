@@ -18,19 +18,19 @@ const SECTIONS = [
   {
     id: 'reservations',
     eyebrow: 'Reservations & Booking Calendar',
-    headline: 'Every booking, one calendar — drag to change rooms in seconds',
+    headline: 'Every booking, one calendar. Drag to change rooms in seconds',
     subheadline: 'Manual, OTA, travel agent, or group bookings all land in the same live calendar.',
-    body: 'Move a guest between same-type rooms with drag and drop. Every booking — however it came in — is editable, trackable, and fully audited.',
+    body: 'Move a guest between same-type rooms with drag and drop. Every booking, however it came in, is editable, trackable, and fully audited.',
     features: [
-      { lead: 'Manual, OTA, travel agent & group bookings', rest: '— all sources in one dashboard' },
-      { lead: 'Drag-and-drop room changes', rest: '— move a reservation between rooms of the same type instantly' },
-      { lead: 'Booking history', rest: '— a full audit trail of every action taken on a booking' },
-      { lead: 'Booking notes', rest: '— internal context attached to any reservation' },
-      { lead: 'Split payments', rest: '— split across OTA, guest, and other payers on the same booking' },
-      { lead: 'Automated confirmations', rest: '— email and WhatsApp sent automatically to guest, agent, and hotel' },
+      { lead: 'Manual, OTA, travel agent & group bookings', rest: '· all sources in one dashboard' },
+      { lead: 'Drag-and-drop room changes', rest: '· move a reservation between rooms of the same type instantly' },
+      { lead: 'Booking history', rest: '· a full audit trail of every action taken on a booking' },
+      { lead: 'Booking notes', rest: '· internal context attached to any reservation' },
+      { lead: 'Split payments', rest: '· split across OTA, guest, and other payers on the same booking' },
+      { lead: 'Automated confirmations', rest: '· email and WhatsApp sent automatically to guest, agent, and hotel' },
     ],
     assets: [
-      { label: 'Looping demo — booking calendar in use', path: '/assets/product/reservations/calendar-demo.mp4' },
+      { label: 'Looping demo · booking calendar in use', path: '/assets/product/reservations/calendar-demo.mp4' },
       { label: 'Drag-and-drop room change', path: '/assets/product/reservations/drag-drop.gif' },
     ],
     alt: true,
@@ -53,7 +53,7 @@ const SECTIONS = [
   {
     id: 'availability',
     eyebrow: 'Availability Management',
-    headline: 'See what\u2019s open, right now — not what a spreadsheet said this morning',
+    headline: 'See what\u2019s open, right now, not what a spreadsheet said this morning',
     features: [
       'Live room availability',
       'Occupancy calendar',
@@ -88,7 +88,7 @@ export default function PropertyManagement() {
             <span className="underline-accent">Property Management</span>
           </h1>
           <p className="max-w-2xl mx-auto mt-6 text-sm md:text-lg text-ink-secondary">
-            Reservations, front office, and availability — the day-to-day core of running a property.
+            Reservations, front office, and availability, the day-to-day core of running a property.
           </p>
         </motion.div>
       </div>
