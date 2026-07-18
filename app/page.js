@@ -2,9 +2,9 @@
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import NavBar from '@/components/NavBar'
-import WhoIsProppoFor, { BuiltForYourTeam, DownloadAppSection, FinalCTASection, HowDoesProppoWork, PricingSection, TeamSection, Testimonials, WhatDoesProppoDo, WhoGetsWhat, WhyChooseProppo } from '@/components/Sections'
+import { FinalCTABand, FourPillars, ProblemFraming, SocialProof, SolutionsTeaser, TrustBar, WhatDoesProppoDo, WhyChooseProppo } from '@/components/Sections'
 import { useTheme } from 'next-themes'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 export default function page() {
   let {setTheme} = useTheme()
@@ -15,17 +15,14 @@ export default function page() {
     <>
       <NavBar/>
       <Hero/>
-      {/* <HowDoesProppoWork/> */}
-      <WhoIsProppoFor/>
-      <WhyChooseProppo/>
+      <TrustBar/>
+      <ProblemFraming/>
+      <FourPillars/>
       <WhatDoesProppoDo/>
-      <WhoGetsWhat/>
-      <BuiltForYourTeam/>
-      <PricingSection/>
-      <Testimonials/>
-      {/* <TeamSection/> */}
-      <DownloadAppSection/>
-      <FinalCTASection/>
+      <SolutionsTeaser/>
+      <WhyChooseProppo/>
+      <SocialProof/>
+      <FinalCTABand/>
       <Footer/>
       <span id='alert_wrap'></span>
     </>

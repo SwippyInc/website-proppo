@@ -1,11 +1,19 @@
-import { Poppins } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import ClientGoogleAnalytics from "@/components/ClientGoogleAnalytics";
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '700', '900'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-body',
+});
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-display',
 });
 
 export const metadata = {
@@ -16,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className}`}>
+      <body className={`${inter.className} ${inter.variable} ${fraunces.variable}`}>
         <ClientGoogleAnalytics GTM_ID="GTM-M2QT2W4N" />
         {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange> */}
           {children}

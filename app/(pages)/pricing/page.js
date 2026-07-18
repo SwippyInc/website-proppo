@@ -1,71 +1,57 @@
 'use client'
-import { NavBar1 } from "@/components/NavBar"
-import Footer from "@/components/Footer"
-import { useSignUpForm } from "@/hooks/useForm"
-import Button from "@/components/Button"
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
+import PageHero from '@/components/PageHero'
+import Button from '@/components/Button'
+import { VerifyTag } from '@/components/MediaPlaceholder'
+import { useBookCallForm } from '@/hooks/useForm'
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+}
+
+// Pricing per proppo-site-spec.md Section 12 (tone: neutral) — single flat rate card;
+// no tier table until the spec's open item on tiers is resolved
 export default function Pricing() {
-    const {renderSUForm,formComponent} = useSignUpForm()
-    const pricing_data = [
-        // {name:'Yearly',cost:45,off:10},
-        // {name:'Half Yearly/Quaterly',cost:48,off:5},
-        // {name:'Monthly',cost:50,off:0},
-    ]
-    const features = [
-        '📋 Unlimited Property Listings',
-        '🔔 Real-Time Booking Notifications',
-        '💸 Secure Payment Processing',
-        '📊 Detailed Analytics Dashboard',
-        '🛠️ 24/7 Customer Support',
-        '🔄 Automated Booking Management',
-        '🔒 Enhanced Data Security'
-    ]
+  const { renderCBForm, CBFComp } = useBookCallForm()
   return (
     <>
-      <NavBar1/>
-      {formComponent}
-      <div className="w-[95%] md:w-[80%] mx-auto py-20 md:pt-40">
-        <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl text-center">
-            <span className="bl_un">Transparent</span> Pricing
-        </h1>
-        <p className="w-fit mx-auto my-4 max-w-[90vw] text-xs md:text-sm opacity-70 italic bg-blue-800/5 p-1 px-2 border-r-[#6840ff] border-r-2 dark:bg-white/5 dark:border-r-white dark:text-white text-center">
-        Choose the plan that fits your needs. No hidden fees. Just Powerful Features. 🙌
-        </p>
-        <div className="flex items-center justify-center">
-            <Button
-              styles="btn_pri text-sm md:text-lg px-5"
-              onClick={renderSUForm}
-            >
-              Contact Us for Custom Plans
-            </Button>
-          </div>
+      <NavBar />
+      {CBFComp}
+      <PageHero
+        title={<>Simple pricing that <span className="italic text-brand-primary">scales</span> with your property</>}
+      />
 
-        <div className="relative w-[90%] md:w-[80%] mx-auto mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4">
-        {pricing_data.map((item, index) => {
-          const { name, cost, off } = item
-          return (
-            <div
-              key={index}
-              className="flex items-center flex-col bg-white rounded-4xl shadow-xl justify-start gap-2 py-8 shadow-[#6840ff]/10 border border-gray-200 dark:bg-black/90 dark:border-gray-800/50 relative"
-            >
-            {off>0 && <div className="absolute -top-2 left-[50%] translate-x-[-50%] bg-[#6840ff] text-white px-2 py-1 rounded-t rounded-b-xl">
-                {off}% off
-            </div>}
-              <div className="p-2 md:px-6">
-                <p className="text-xl font-medium mb-2">{name}</p>
-                <p className="text-2xl md:text-4xl font-bold text-[#6840ff] mb-2">₹{cost}<span className="text-base font-normal">/room/month</span></p>
-                <p className="text-xs opacity-80 mb-2">Minimum ₹2000/month</p>
-                <ul className="list-none text-xs md:text-sm mt-8">
-                    {features.map((feature, i) => (
-                        <li key={i} className={`my-3 ${i !== 0 ? 'border-t border-t-gray-200/50 pt-3 dark:border-gray-100/10' : ''}`}>{feature}</li>
-                    ))}
-                </ul>
-              </div>
+      <section className="py-12 md:py-24 bg-surface-bg">
+        <motion.div
+          className="max-w-xl mx-auto bg-surface-card border border-line rounded-3xl p-8 md:p-12 text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
+          <p className="font-display text-6xl md:text-7xl font-medium text-ink">
+            ₹150<span className="text-2xl md:text-3xl font-normal text-ink-secondary">/room/month</span>
+          </p>
+          <VerifyTag>confirm this is still current, and whether it&apos;s the full/only tier or a starting price</VerifyTag>
+          <p className="text-ink-secondary mt-4">No commission on direct bookings.</p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <Button styles="btn_v2_pri text-base px-8 py-3" onClick={renderCBForm}>Book a demo</Button>
+            <div className="flex flex-col items-center gap-1.5">
+              <Link href="mailto:mail@proppo.in">
+                <Button styles="btn_v2_sec text-base px-8 py-3">Contact us for custom pricing</Button>
+              </Link>
+              <p className="text-xs text-ink-muted">for multi-property and chain accounts</p>
             </div>
-          )
-        })}
-      </div>
-      </div>
-      <Footer/>
+          </div>
+        </motion.div>
+      </section>
+
+      <Footer />
     </>
   )
 }
