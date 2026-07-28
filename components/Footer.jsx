@@ -2,6 +2,8 @@
 import Image from "next/image";
 
 import proppo_white_logo from '../public/images/proppo_logo.png'
+import app_store from '../public/images/app_store.png'
+import google_play_store from '../public/images/google_play_store.webp'
 
 import Link from "next/link";
 import { motion } from 'framer-motion'
@@ -41,6 +43,10 @@ export default function Footer() {
             <p className="text-[10px] text-ink-muted uppercase tracking-widest">
               Copyright &copy; Proppo. All Rights Reserved.
             </p>
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-3">
+              <Link target="_blank" href="https://play.google.com/store/apps/details?id=in.proppo.app" title="Get in on Google Play"><Image src={google_play_store} height={100} width={100} className="h-10 w-auto" alt="Get in on Google Play"/></Link>
+              <Link target="_blank" href="https://apps.apple.com/in/app/proppo/id6754452967" title="Download on the App Store"><Image src={app_store} height={100} width={100} className="h-10 w-auto" alt="Download on the App Store"/></Link>
+            </div>
           </div>
           <div>
             <p className={headingClass}>Product</p>
@@ -78,10 +84,11 @@ export default function Footer() {
           </div>
           <div>
             <p className={headingClass}>Contact</p>
-            <ul className="list-none flex flex-col gap-2 text-sm text-ink-secondary leading-relaxed">
+            <ul className="list-none flex flex-col gap-2 text-xs text-ink-secondary leading-relaxed">
               <li>
                 Swippy Tech LLP<br />
-                Kasumpti, Shimla (HP) - 171009
+                Cedar Cottages, Nepali Road<br/>
+                Mashobra-2, Shimla (HP) - 171007
               </li>
               <li><Link href="mailto:mail@proppo.in" title="Mail Us" className={linkClass}>mail@proppo.in</Link></li>
               <li><Link href="tel:+919418855294" title="Call Us" className={linkClass}>+91 94188 55294</Link></li>
